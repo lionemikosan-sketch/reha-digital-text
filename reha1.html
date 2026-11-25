@@ -1,0 +1,2220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>リハビリテーション医学① リハビリテーション医療</title>
+<meta name="description" content="リハビリテーションの理念・障害のとらえ方（ICF）・分野と時期・チーム医療・地域リハと介護保険">
+<!--
+==========================================================================
+  鍼灸学生向け デジタルテキスト（共通テンプレート）
+  ------------------------------------------------------------------------
+  ■ このファイルだけで動きます（サーバー・ログイン・ネット接続不要）。
+  ■ 学習記録はブラウザの localStorage に保存されます（端末・ブラウザごと）。
+    「学習記録」パネルからバックアップ（.json）と復元ができます。
+
+  ■ 章（テーマ）の追加・修正・削除
+    <main> の中の <section class="unit" ...> ～ </section> が1テーマです。
+    コピーして書き換えると、目次・進捗・ノート・問題・検索が自動で作られます。
+
+    <section class="unit" id="u15" data-no="15" data-part="第2部 疾患" data-title="テーマ名">
+      <header class="unit-head"><p class="unit-part">第2部 疾患</p><h2><span class="no">15</span>テーマ名</h2></header>
+      <div class="step" data-step="1"><h3>見出し</h3> … </div>   ← data-step 1〜9 / x
+    </section>
+
+  ■ 部品（クラス名）
+    <p class="lead">        ひとことで言うと（1ブロック1メッセージ）
+    <b class="key">         重要語句（オレンジ。「隠す」機能の対象）
+    <dfn data-def="説明">   専門用語（タップで解説）
+    <figure class="fig">    図（SVG）。<text class="nm"> が「名称を隠す」の対象
+    <div class="ph">        画像挿入用プレースホルダー
+    <details class="more">  補足（タップで展開） / <details class="adv"> 発展
+    <aside class="link">    つながり（既習知識との関連） / <aside class="clinic"> 鍼灸臨床
+    <div class="rq"><p class="rq-q">問</p><div class="rq-a">答</div></div>  思い出す
+    <div class="summary">   要点（コピーボタン付き）
+    <div class="note" data-prompt="問いかけ">  自由記述ノート（自動保存）
+    <div class="q mc" data-ans="2"><p class="stem">問</p><ol class="opts"><li>…</li></ol><div class="exp">解説</div></div>
+    <div class="q fill"><p class="stem">…<span class="fb" data-a="正答|別解"></span>…</p><div class="exp">…</div></div>
+    <div class="q write"><p class="stem">問</p><div class="exp">模範解答</div></div>
+==========================================================================
+-->
+<style>
+/* =========================================================
+   デジタルテキスト 共通デザインシステム
+   ・色はここ（:root）だけで管理する
+   ・オレンジ＝重要語句、赤＝動脈血、青＝静脈血 以外の色は使わない
+   ========================================================= */
+:root{
+  --bg:#ffffff;
+  --ink:#1f1f1f;          /* 本文 */
+  --ink2:#4a4a4a;         /* 補助文 */
+  --muted:#7a7a7a;
+  --line:#e2e2e2;
+  --panel:#f6f6f4;        /* 囲み・ブロック背景 */
+  --accent:#d9650a;       /* 重要語句（オレンジ） */
+  --accent-weak:#fff2e6;
+  --accent-line:#f3c7a1;
+  --art:#c8463d;          /* 動脈血 */
+  --vein:#3a6db5;         /* 静脈血 */
+  --ok:#2e7d4f;
+  --ng:#c0392b;
+  --mark:#fff0a8;         /* 学生のマーカー */
+  --font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","BIZ UDPGothic","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  --head-h:56px;
+  --head-full:calc(56px + env(safe-area-inset-top,0px));
+  --toc-w:300px;
+  --maxw:760px;
+  --r:12px;
+  --fs:17px;
+}
+html.fs-s{--fs:15.5px} html.fs-l{--fs:19.5px}
+@media (min-width:768px){ :root{--fs:18px} html.fs-s{--fs:16px} html.fs-l{--fs:20.5px} }
+
+*{box-sizing:border-box}
+html{font-size:var(--fs);-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--head-h) + 16px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.85;letter-spacing:.02em;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+button{font-family:inherit;font-size:.9rem;color:inherit}
+:focus-visible{outline:3px solid var(--accent-line);outline-offset:2px}
+
+/* ---------- ヘッダー ---------- */
+.topbar{position:fixed;inset:0 0 auto 0;height:var(--head-full);padding-top:env(safe-area-inset-top,0px)!important;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:6px;padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px));z-index:50}
+.topbar .ttl{flex:1;min-width:0;line-height:1.25}
+.topbar .ttl b{display:block;font-size:.72rem;color:var(--muted);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .ttl span{display:block;font-size:.95rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ibtn{appearance:none;border:0;background:transparent;width:44px;height:44px;border-radius:10px;display:grid;place-items:center;cursor:pointer;flex:none;position:relative}
+.ibtn:hover{background:var(--panel)}
+.ibtn svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ibtn small{position:absolute;bottom:1px;left:0;right:0;font-size:9px;color:var(--muted);line-height:1}
+.readbar{position:fixed;top:var(--head-full);left:0;height:3px;background:var(--accent);width:0;z-index:51;transition:width .1s linear}
+.toc-btn{display:grid}
+@media (min-width:1100px){.toc-btn{display:none}}
+
+/* ---------- 目次（サイドバー / ドロワー） ---------- */
+.toc{position:fixed;top:var(--head-full);bottom:0;left:0;width:var(--toc-w);max-width:86vw;background:#fff;border-right:1px solid var(--line);overflow-y:auto;z-index:45;padding:14px 12px 40px;transform:translateX(-105%);transition:transform .2s ease}
+.toc.open{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.25)}
+@media (min-width:1100px){.toc{transform:none;box-shadow:none!important}}
+.toc h2{font-size:.8rem;color:var(--muted);margin:6px 6px 4px;font-weight:700;letter-spacing:.06em}
+.toc .part{margin:14px 0 4px;padding:0 6px;display:flex;justify-content:space-between;align-items:baseline;font-size:.82rem;font-weight:700}
+.toc .part em{font-style:normal;color:var(--muted);font-weight:600;font-size:.75rem}
+.toc .pbar{height:4px;background:var(--line);border-radius:2px;margin:2px 6px 6px;overflow:hidden}
+.toc .pbar i{display:block;height:100%;background:var(--accent);width:0}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc a{display:flex;gap:8px;align-items:flex-start;text-decoration:none;padding:7px 8px;border-radius:8px;font-size:.88rem;line-height:1.45}
+.toc a:hover{background:var(--panel)}
+.toc a .no{flex:none;width:1.6em;color:var(--muted);font-weight:700;font-size:.8rem;padding-top:.1em}
+.toc a .ck{flex:none;margin-left:auto;font-size:.8rem;color:var(--ok);visibility:hidden}
+.toc li.done>a .ck{visibility:visible}
+.toc li.cur>a{background:var(--accent-weak);font-weight:700}
+.toc .subs{display:none;margin:0 0 6px 2.2em;border-left:2px solid var(--accent-line)}
+.toc li.cur .subs{display:block}
+.toc .subs a{font-size:.78rem;padding:4px 8px;color:var(--ink2)}
+.toc .subs a.cur{color:var(--accent);font-weight:700}
+.toc .bm{color:var(--accent);font-size:.75rem;flex:none}
+
+/* ---------- 本文レイアウト ---------- */
+main{padding-top:calc(var(--head-h) + 12px);padding-bottom:80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:1100px){main{margin-left:var(--toc-w);padding-left:40px;padding-right:40px}}
+.unit{max-width:var(--maxw);margin:0 auto 72px;scroll-margin-top:calc(var(--head-h) + 10px)}
+.unit-head{border-top:4px solid var(--ink);padding-top:14px;margin-bottom:22px}
+.unit-part{margin:0;color:var(--muted);font-size:.8rem;font-weight:700;letter-spacing:.08em}
+.unit-head h2{font-size:1.65rem;line-height:1.35;margin:.2em 0 .3em;letter-spacing:.03em}
+.unit-head h2 .no{color:var(--accent);margin-right:.35em}
+.unit-tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{appearance:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font-size:.8rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1.3;min-height:36px}
+.chip:hover{border-color:#bbb}
+.chip.on{border-color:var(--accent);background:var(--accent-weak);color:var(--accent);font-weight:700}
+.chip svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.chip.on svg{fill:currentColor}
+
+.step{margin:34px 0;scroll-margin-top:calc(var(--head-h) + 10px)}
+.step>h3{font-size:1.22rem;line-height:1.45;margin:0 0 12px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;color:#fff;background:var(--ink);border-radius:6px;padding:3px 9px;line-height:1.4}
+.step[data-step="6"] .badge{background:var(--accent)}
+.step[data-step="7"] .badge,.step[data-step="8"] .badge,.step[data-step="9"] .badge{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+.step[data-step="x"] .badge{background:var(--muted)}
+h4{font-size:1.05rem;margin:22px 0 8px;line-height:1.5}
+p{margin:.6em 0}
+.lead{font-size:1.12rem;font-weight:700;line-height:1.75;padding:14px 16px;border-left:5px solid var(--accent);background:var(--accent-weak);border-radius:0 var(--r) var(--r) 0;margin:12px 0 18px}
+.key{color:var(--accent);font-weight:700}
+.sub{color:var(--ink2);font-size:.9rem}
+.small{font-size:.85rem;color:var(--ink2)}
+ul,ol{padding-left:1.4em;margin:.5em 0}
+li{margin:.25em 0}
+.src{font-size:.75rem;color:var(--muted);margin-top:4px}
+
+/* 用語ポップアップ */
+dfn{font-style:normal;border-bottom:1.5px dotted var(--ink2);cursor:help}
+.pop{position:absolute;z-index:70;max-width:min(320px,90vw);background:var(--ink);color:#fff;font-size:.85rem;line-height:1.6;padding:10px 12px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.pop b{color:#ffd2ad}
+
+/* 囲み */
+.box{background:var(--panel);border-radius:var(--r);padding:14px 16px;margin:16px 0}
+.box>:first-child{margin-top:0}.box>:last-child{margin-bottom:0}
+.link,.clinic{border-radius:var(--r);padding:14px 16px;margin:14px 0;border:1.5px solid var(--line);background:#fff}
+.link::before,.clinic::before{display:block;font-size:.75rem;font-weight:700;letter-spacing:.06em;margin-bottom:4px}
+.link::before{content:"つながり";color:var(--ink2)}
+.clinic{border-color:var(--accent-line)}
+.clinic::before{content:"鍼灸臨床では";color:var(--accent)}
+.link>:last-child,.clinic>:last-child{margin-bottom:0}
+.link p:first-of-type,.clinic p:first-of-type{margin-top:0}
+.jump{display:inline-block;font-size:.82rem;font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--accent-line);margin:2px 8px 2px 0}
+.jump::before{content:"→ "}
+.warn{border-left:4px solid var(--ng);background:#fdf1ef;padding:10px 14px;border-radius:0 var(--r) var(--r) 0;margin:12px 0}
+
+details.more,details.adv{border:1px solid var(--line);border-radius:var(--r);margin:12px 0;background:#fff}
+details.more>summary,details.adv>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:.92rem;list-style:none;display:flex;gap:8px;align-items:center}
+details>summary::-webkit-details-marker{display:none}
+details.more>summary::before,details.adv>summary::before{content:"＋";color:var(--muted);font-weight:700}
+details[open]>summary::before{content:"－"!important}
+details.adv>summary::after{content:"発展";font-size:.68rem;border:1px solid var(--muted);color:var(--muted);border-radius:4px;padding:0 5px;margin-left:auto}
+details.more>summary::after{content:"補足";font-size:.68rem;border:1px solid var(--muted);color:var(--muted);border-radius:4px;padding:0 5px;margin-left:auto}
+details .dbody{padding:0 16px 14px}
+
+/* 表 */
+.tbl-wrap{overflow-x:auto;margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:.9rem;line-height:1.6}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+thead th{background:var(--panel);font-weight:700}
+tbody th{background:#fafaf8;font-weight:700;white-space:nowrap}
+td.c,th.c{text-align:center}
+
+/* カード（比較・一覧） */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:14px 0}
+.card{border:1.5px solid var(--line);border-radius:var(--r);padding:12px 14px;background:#fff}
+.card h5{margin:0 0 4px;font-size:.98rem}
+.card p{margin:.2em 0;font-size:.88rem}
+.card .num{display:inline-grid;place-items:center;width:1.6em;height:1.6em;border-radius:50%;background:var(--ink);color:#fff;font-size:.8rem;font-weight:700;margin-right:6px}
+a.card{text-decoration:none;display:block}
+a.card:hover{border-color:var(--accent-line)}
+.big{font-size:1.7rem;font-weight:800;letter-spacing:.02em;line-height:1.2}
+.formula{text-align:center;font-weight:800;font-size:1.15rem;padding:14px;border:2px solid var(--ink);border-radius:var(--r);margin:16px 0;line-height:1.6}
+.formula small{display:block;font-weight:500;font-size:.8rem;color:var(--ink2)}
+
+/* ---------- 図 ---------- */
+.fig{margin:18px 0 22px}
+.fig .canvas{border:1px solid var(--line);border-radius:var(--r);padding:10px;background:#fff;text-align:center}
+.fig .canvas svg{display:block;margin:0 auto;height:auto;width:100%}
+.fig.w-m .canvas svg{max-width:560px}.fig.w-s .canvas svg{max-width:420px}
+figcaption{font-size:.85rem;color:var(--ink2);margin-top:6px;line-height:1.6}
+figcaption b{color:var(--ink)}
+.figbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.figbar .chip{min-height:32px;padding:4px 10px;font-size:.75rem}
+.ph{border:2px dashed #c9c9c9;border-radius:var(--r);background:repeating-linear-gradient(45deg,#fafafa 0 10px,#f4f4f4 10px 20px);min-height:180px;display:grid;place-items:center;text-align:center;padding:20px;color:var(--muted);font-size:.85rem;margin:16px 0}
+.ph b{display:block;color:var(--ink2);font-size:.95rem;margin-bottom:4px}
+
+/* ステップ図（コマ送り） */
+.stepper .frame{display:none}
+.stepper .frame.on{display:block}
+.stepper .cap{font-size:.95rem;line-height:1.7;margin-top:8px;text-align:left;min-height:4.8em}
+.stepper .cap b{color:var(--accent)}
+.stepper .ctrl{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px}
+.stepper .dots{display:flex;gap:6px}
+.stepper .dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.stepper .dots i.on{background:var(--accent)}
+
+/* ---------- 語句・名称を隠す ---------- */
+.hide-keys .key:not(.shown){color:transparent!important;background:#ececec;border-radius:4px;cursor:pointer;box-shadow:inset 0 -2px 0 var(--accent-line);user-select:none}
+.hide-keys .key:not(.shown) *{color:transparent!important;background:transparent!important}
+.key.shown{background:var(--accent-weak);border-radius:4px}
+
+/* ---------- 思い出す（アクティブリコール） ---------- */
+.recall-tools{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px}
+.rq{border:1.5px solid var(--line);border-radius:var(--r);padding:12px 14px;margin:10px 0}
+.rq-q{margin:0 0 8px;font-weight:700}
+.rq-a{display:none;border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}
+.rq.open .rq-a{display:block}
+.rq .chip{min-height:32px}
+
+/* ---------- まとめ・ノート ---------- */
+.summary{border:2px solid var(--ink);border-radius:var(--r);padding:14px 16px;margin:16px 0}
+.summary h5{margin:0 0 6px;font-size:.95rem}
+.summary ul{margin:0}
+.sum-tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.note{margin:14px 0}
+.note .prompt{font-weight:700;margin-bottom:6px}
+.note .hint{font-size:.82rem;color:var(--ink2);margin:0 0 8px}
+.note textarea,.q textarea{width:100%;min-height:150px;font:inherit;font-size:1rem;line-height:1.8;padding:12px;border:1.5px solid #cfcfcf;border-radius:10px;resize:vertical;background:#fffef9}
+.note textarea:focus,.q textarea:focus{border-color:var(--accent);outline:none}
+.note .ntools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.note .saved{font-size:.75rem;color:var(--muted)}
+.note-print{display:none}
+
+/* ---------- 確認問題 ---------- */
+.q{border:1.5px solid var(--line);border-radius:var(--r);padding:14px 16px;margin:14px 0;position:relative}
+.q .qno{font-size:.75rem;font-weight:700;color:var(--muted);letter-spacing:.06em}
+.q .stem{margin:.2em 0 .7em;font-weight:700}
+.q ol.opts{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.q ol.opts li{margin:0}
+.q ol.opts button{width:100%;text-align:left;border:1.5px solid #d6d6d6;background:#fff;border-radius:10px;padding:10px 12px;font-size:.95rem;line-height:1.55;cursor:pointer;display:flex;gap:10px}
+.q ol.opts button:hover{border-color:#aaa}
+.q ol.opts button .n{flex:none;font-weight:700;color:var(--muted)}
+.q ol.opts button.right{border-color:var(--ok);background:#eef7f1}
+.q ol.opts button.wrong{border-color:var(--ng);background:#fdf0ee}
+.q .exp{display:none;margin-top:12px;padding:10px 12px;background:var(--panel);border-radius:10px;font-size:.92rem}
+.q.answered .exp{display:block}
+.q .res{font-weight:800;margin-right:6px}
+.q .res.ok{color:var(--ok)}.q .res.ng{color:var(--ng)}
+.q .qtools{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.fb{display:inline-block;min-width:6em;border:0;border-bottom:2px solid var(--ink);background:#fffef3;font:inherit;padding:0 6px;margin:0 2px;border-radius:4px 4px 0 0;width:8em;max-width:100%}
+.fb.right{border-color:var(--ok);background:#eef7f1}
+.fb.wrong{border-color:var(--ng);background:#fdf0ee}
+.fbans{color:var(--ng);font-weight:700;font-size:.85rem;margin-left:2px}
+.qscore{font-weight:700;margin:6px 0 0;font-size:.9rem}
+
+.unit-foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:16px;margin-top:30px}
+.donebtn{appearance:none;border:2px solid var(--ink);background:#fff;border-radius:999px;padding:10px 18px;font-weight:800;cursor:pointer;font-size:.95rem}
+.donebtn.on{background:var(--ink);color:#fff}
+.nextlink{font-weight:700;text-decoration:none;font-size:.9rem}
+
+/* ---------- マーカー ---------- */
+mark.hl{background:var(--mark);color:inherit;border-radius:2px;padding:0 1px;cursor:pointer}
+.markbtn{position:absolute;z-index:80;display:none;gap:4px;background:var(--ink);border-radius:10px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.markbtn button{border:0;background:transparent;color:#fff;font-weight:700;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:.85rem}
+.markbtn button:hover{background:rgba(255,255,255,.12)}
+
+/* ---------- パネル・検索・トースト ---------- */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:90;display:none}
+.overlay.open{display:block}
+.sheet{position:fixed;z-index:95;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.2);display:none;flex-direction:column}
+.sheet.open{display:flex}
+.sheet .sh-head{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.sheet .sh-head h3{margin:0;font-size:1rem;flex:1}
+.sheet .sh-body{overflow-y:auto;padding:14px 16px 30px}
+.panel-r{top:0;right:0;bottom:0;width:min(420px,100vw)}
+.search-s{top:0;left:0;right:0;max-height:85vh;border-radius:0 0 16px 16px}
+@media (min-width:768px){.search-s{left:50%;right:auto;width:680px;transform:translateX(-50%);top:20px;border-radius:16px}}
+.search-s input{flex:1;font:inherit;font-size:1rem;border:1.5px solid #cfcfcf;border-radius:10px;padding:10px 12px;min-width:0}
+.sres{list-style:none;margin:0;padding:0}
+.sres li{border-bottom:1px solid var(--line)}
+.sres a{display:block;padding:10px 4px;text-decoration:none}
+.sres .u{font-size:.75rem;color:var(--muted);font-weight:700}
+.sres .t{font-size:.9rem;line-height:1.6}
+.sres em{font-style:normal;background:var(--accent-weak);color:var(--accent);font-weight:700}
+.flash{animation:flash 1.8s ease}
+@keyframes flash{0%,40%{background:var(--accent-weak);box-shadow:0 0 0 6px var(--accent-weak)}100%{background:transparent;box-shadow:none}}
+.menu{position:fixed;top:calc(var(--head-full) - 4px);right:max(8px,env(safe-area-inset-right,0px));z-index:95;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.15);padding:8px;display:none;width:min(300px,94vw)}
+.menu.open{display:block}
+.menu h4{margin:8px 8px 4px;font-size:.75rem;color:var(--muted)}
+.menu button.mi{display:flex;width:100%;text-align:left;border:0;background:transparent;padding:10px;border-radius:8px;cursor:pointer;font-size:.9rem;gap:8px;align-items:center}
+.menu button.mi:hover{background:var(--panel)}
+.menu button.mi .sw{margin-left:auto;width:36px;height:20px;border-radius:10px;background:#ccc;position:relative;flex:none}
+.menu button.mi .sw::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .15s}
+.menu button.mi.on .sw{background:var(--accent)}
+.menu button.mi.on .sw::after{left:18px}
+.seg{display:flex;gap:4px;padding:4px 8px 8px}
+.seg button{flex:1;border:1.5px solid var(--line);background:#fff;border-radius:8px;padding:6px;cursor:pointer}
+.seg button.on{border-color:var(--accent);color:var(--accent);font-weight:700}
+.rec h4{font-size:.85rem;margin:20px 0 8px;color:var(--ink2)}
+.rec .stat{display:flex;gap:10px}
+.rec .stat div{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.rec .stat b{display:block;font-size:1.4rem}
+.rec .stat span{font-size:.72rem;color:var(--muted)}
+.rec ul{list-style:none;padding:0;margin:0}
+.rec li{border-bottom:1px solid var(--line);padding:8px 0;font-size:.85rem;display:flex;gap:8px;align-items:flex-start}
+.rec li a{flex:1;text-decoration:none}
+.rec li .x{border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:.8rem}
+.rec .empty{color:var(--muted);font-size:.82rem}
+.rec .btns{display:flex;flex-wrap:wrap;gap:8px}
+.rec .pp{display:flex;align-items:center;gap:8px;font-size:.82rem;margin:4px 0}
+.rec .pp span{width:7.5em;flex:none;line-height:1.4}
+.rec .pp i{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden;display:block}
+.rec .pp i b{display:block;height:100%;background:var(--accent)}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:.88rem;z-index:120;display:none;align-items:center;gap:10px;max-width:92vw;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.toast.open{display:flex}
+.toast button{border:0;background:#fff;color:var(--ink);border-radius:8px;padding:6px 10px;font-weight:700;cursor:pointer;font-size:.8rem;flex:none}
+.toast button.g{background:transparent;color:#fff}
+.lightbox{position:fixed;inset:0;background:#fff;z-index:110;display:none;flex-direction:column}
+.lightbox.open{display:flex}
+.lightbox .lb-body{flex:1;overflow:auto;padding:16px;-webkit-overflow-scrolling:touch}
+.lightbox .lb-body svg{width:100%;min-width:640px;max-width:1400px;height:auto;display:block;margin:0 auto}
+.lightbox .zoom{display:flex;gap:6px}
+
+/* ---------- 印刷（Goodnotes・PDF保存用） ---------- */
+@media print{
+  @page{size:A4;margin:14mm 13mm}
+  :root{--fs:10.5pt}
+  html{font-size:10.5pt}
+  body{line-height:1.7}
+  .topbar,.readbar,.toc,.unit-tools,.figbar,.recall-tools,.sum-tools,.ntools,.qtools,.unit-foot,.overlay,.sheet,.menu,.toast,.markbtn,.lightbox,.stepper .ctrl,.rq .chip,.noprint{display:none!important}
+  main{margin:0!important;padding:0!important}
+  .unit{max-width:none;margin:0;break-before:page}
+  .unit:first-of-type{break-before:auto}
+  .fig,.q,.summary,.rq,.card,.box,.link,.clinic,table,.lead{break-inside:avoid}
+  .step>h3,h4{break-after:avoid}
+  .fig .canvas{border:0;padding:0}
+  .fig .canvas svg{max-width:150mm!important}
+  .stepper .frame{display:block!important;margin-bottom:6mm}
+  body.print-ans .rq-a{display:block!important}
+  details .dbody{display:block!important}
+  .hide-keys .key{color:var(--accent)!important;background:none!important}
+  .note textarea,.q textarea{display:none}
+  .note-print{display:block;border:1px solid #bbb;border-radius:6px;min-height:42mm;padding:3mm;white-space:pre-wrap;background:repeating-linear-gradient(#fff 0 8.4mm,#d9d9d9 8.4mm 8.6mm)}
+  .q .exp,.fbans{display:none!important}
+  body.print-ans .q .exp{display:block!important}
+  body:not(.print-ans) .q ol.opts button.right,body:not(.print-ans) .q ol.opts button.wrong{background:#fff;border-color:#d6d6d6}
+  .q ol.opts button{padding:4px 8px}
+  a{text-decoration:none}
+  mark.hl{background:#fff0a8!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .lead,.badge,.key{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* スマホのノッチ・ホームバーを避ける（通常のブラウザでは 0） */
+.sheet.panel-r,.lightbox{padding-top:env(safe-area-inset-top,0px)}
+.toast{bottom:calc(20px + env(safe-area-inset-bottom,0px))}
+
+</style>
+<style id="svg-css">
+/* 図（SVG）専用スタイル。画像保存時にもこのまま埋め込むため、変数を使わず色を直接書く */
+svg.dg text{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","BIZ UDPGothic","Yu Gothic",Meiryo,sans-serif;font-size:16px;fill:#1f1f1f;dominant-baseline:middle}
+svg.dg .s{font-size:13.5px}
+svg.dg .m{font-size:15px}
+svg.dg .l{font-size:19px;font-weight:700}
+svg.dg .b{font-weight:700}
+svg.dg .w{fill:#fff}
+svg.dg .tr{fill:#b23a32}
+svg.dg .tb{fill:#2f5f9f}
+svg.dg .to{fill:#d9650a}
+svg.dg .tg{fill:#6b6b6b}
+svg.dg .ln{stroke:#555;stroke-width:1.3;fill:none}
+svg.dg .lnd{stroke:#888;stroke-width:1.3;fill:none;stroke-dasharray:4 4}
+svg.dg .chv{fill:#e8eff9;stroke:#3a6db5;stroke-width:3}
+svg.dg .cha{fill:#fbebe9;stroke:#c8463d;stroke-width:3}
+svg.dg .chg{fill:#f1f1f1;stroke:#777;stroke-width:3}
+svg.dg .sep{fill:#d8d1cf;stroke:none}
+svg.dg .tubev{stroke:#2f5f9f;fill:none;stroke-linecap:butt}
+svg.dg .tubev2{stroke:#cfdcf1;fill:none;stroke-linecap:butt}
+svg.dg .tubea{stroke:#b23a32;fill:none;stroke-linecap:butt}
+svg.dg .tubea2{stroke:#f6d2ce;fill:none;stroke-linecap:butt}
+svg.dg .halo{stroke:#fff;fill:none}
+svg.dg .av{stroke:#333;stroke-width:4;stroke-linecap:round;fill:none}
+svg.dg .flv{stroke:#3a6db5;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.dg .fla{stroke:#c8463d;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.dg .flo{stroke:#d9650a;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.dg .flk{stroke:#444;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.dg .bx{fill:#fff;stroke:#444;stroke-width:1.6}
+svg.dg .bxg{fill:#f4f4f2;stroke:#999;stroke-width:1.2}
+svg.dg .bxk{fill:#fff2e6;stroke:#d9650a;stroke-width:2}
+svg.dg .bxr{fill:#fbebe9;stroke:#c8463d;stroke-width:1.6}
+svg.dg .bxb{fill:#e8eff9;stroke:#3a6db5;stroke-width:1.6}
+svg.dg .bxd{fill:#333;stroke:#333;stroke-width:1.6}
+svg.dg .hlz{fill:#fff2e6;stroke:#d9650a;stroke-width:2.5;stroke-dasharray:6 4}
+svg.dg .cond{stroke:#d9650a;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.dg .node{fill:#d9650a;stroke:#fff;stroke-width:2}
+svg.dg .ecg{stroke:#1f1f1f;stroke-width:2.4;fill:none;stroke-linejoin:round;stroke-linecap:round}
+svg.dg .grid{stroke:#f0d6c4;stroke-width:1}
+svg.dg .num{fill:#1f1f1f}
+svg.dg .numo{fill:#d9650a}
+svg.dg .wall{fill:#f2c9c4;stroke:#b23a32;stroke-width:1.5}
+svg.dg .lumen{fill:#fff;stroke:none}
+svg.dg .intima{fill:#f9e4b8;stroke:#b98a2e;stroke-width:1.2}
+svg.dg .media{fill:#e9a7a0;stroke:#b23a32;stroke-width:1.2}
+svg.dg .adv{fill:#f4dcd3;stroke:#a7796c;stroke-width:1.2}
+svg.dg .plq{fill:#f3d36b;stroke:#b98a2e;stroke-width:1.5}
+svg.dg .thr{fill:#8e2a24;stroke:#5e1612;stroke-width:1}
+svg.dg .bar{fill:#f3c7a1;stroke:#d9650a;stroke-width:1.5}
+svg.dg .lbmask{fill:#e6e6e6;stroke:#d9650a;stroke-width:1.5;cursor:pointer}
+svg.dg .lbq{fill:#d9650a;font-weight:700;pointer-events:none}
+svg.dg .nm.hid{visibility:hidden}
+
+</style>
+</head>
+<body data-book="reha1-iryo-v1">
+<header class="topbar">
+  <button class="ibtn toc-btn" id="btnToc" type="button" aria-label="目次"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <div class="ttl"><b>リハビリテーション医学① リハビリテーション医療</b><span id="curTitle" data-default="鍼灸学生のためのデジタルテキスト">鍼灸学生のためのデジタルテキスト</span></div>
+  <button class="ibtn" id="btnSearch" type="button" aria-label="検索"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+  <button class="ibtn" id="btnRec" type="button" aria-label="学習記録"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2zM8 7h6"/></svg><small id="progLabel"></small></button>
+  <button class="ibtn" id="btnMenu" type="button" aria-label="表示と印刷"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button>
+</header>
+<div class="readbar" id="readbar"></div>
+<nav class="toc" id="toc" aria-label="目次"></nav>
+
+<main id="main">
+<!-- ===== 00_intro.html ===== -->
+<section class="unit" id="u00" data-no="0" data-part="はじめに" data-title="この教材の歩き方">
+  <header class="unit-head">
+    <p class="unit-part">はじめに</p>
+    <h2><span class="no">0</span>この教材の歩き方</h2>
+  </header>
+
+  <div class="step" data-step="1">
+    <h3>病気だけでなく「生活」と「社会」を見る</h3>
+    <p class="lead">リハビリテーションは、病気やけがを治すだけでなく、その人が<b class="key">再び適した状態</b>で暮らせるように、生活と社会まで見て支える医療である。</p>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 500 409" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="総まとめ：リハビリテーション医療の全体地図"><title>総まとめ：リハビリテーション医療の全体地図</title><defs><marker id="g23-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g23-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g23-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g23-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="20" y="10" width="460" height="64" rx="10" class="bx"/><text x="250.0" y="42.0" text-anchor="middle"><tspan x="250.0" dy="-0.64em">理念：再び適した状態にする（機能</tspan><tspan x="250.0" dy="1.28em">の回復・障害の克服・活動を育む）</tspan></text><rect x="20" y="108" width="460" height="64" rx="10" class="bx"/><text x="250.0" y="140.0" text-anchor="middle"><tspan x="250.0" dy="-0.64em">障害のとらえ方：ICIDH（一方向）</tspan><tspan x="250.0" dy="1.28em">→ ICF（相互作用・環境も見る）</tspan></text><path d="M250.0,76 L250.0,105" class="flk" marker-end="url(#g23-k)"/><rect x="20.0" y="206" width="223.0" height="41" rx="10" class="bx"/><text x="131.5" y="226.5" text-anchor="middle">5つの分野</text><rect x="257.0" y="206" width="223.0" height="41" rx="10" class="bx"/><text x="368.5" y="226.5" text-anchor="middle">3つの時期</text><path d="M250.0,174 C250.0,189.0 131.5,189.0 131.5,203" class="flk" marker-end="url(#g23-k)"/><path d="M250.0,174 C250.0,189.0 368.5,189.0 368.5,203" class="flk" marker-end="url(#g23-k)"/><rect x="20" y="281" width="460" height="41" rx="10" class="bx"/><text x="250.0" y="301.5" text-anchor="middle">チーム医療：マルチ・インター・トランス</text><path d="M131.5,249 C131.5,264.0 250.0,264.0 250.0,278" class="flk" marker-end="url(#g23-k)"/><path d="M368.5,249 C368.5,264.0 250.0,264.0 250.0,278" class="flk" marker-end="url(#g23-k)"/><rect x="20" y="356" width="460" height="41" rx="10" class="bx"/><text x="250.0" y="376.5" text-anchor="middle">地域で支える：地域リハ・介護保険・地域包括ケア</text><path d="M250.0,324 L250.0,353" class="flk" marker-end="url(#g23-k)"/></svg></div>
+      <figcaption><b>図0-1 この教材の全体地図</b>。上から順に、理念 → 障害のとらえ方 → 分野と時期 → チーム → 地域、と広がっていく。</figcaption>
+    </figure>
+    <div class="cards">
+      <a class="card" href="#u01"><h5><span class="num">1</span>リハビリテーションとは</h5><p>語源・3つのキーワード・<b class="key">診断・治療・支援</b></p></a>
+      <a class="card" href="#u02"><h5><span class="num">2</span>共生社会の考え方</h5><p><b class="key">ノーマライゼーション</b>・バリアフリーなど</p></a>
+      <a class="card" href="#u03"><h5><span class="num">3</span>障害の定義とICIDH</h5><p>障害を<b class="key">3つのレベル</b>で見る</p></a>
+      <a class="card" href="#u04"><h5><span class="num">4</span>ICF</h5><p>6つの要素が<b class="key">互いに影響</b>し合う</p></a>
+      <a class="card" href="#u05"><h5><span class="num">5</span>分野と時期</h5><p>5つの分野・<b class="key">急性期・回復期・生活期</b></p></a>
+      <a class="card" href="#u06"><h5><span class="num">6</span>チーム医療</h5><p>マルチ・インター・トランス</p></a>
+      <a class="card" href="#u07"><h5><span class="num">7</span>地域で支える</h5><p>地域リハ・<b class="key">介護保険</b>・地域包括ケア</p></a>
+    </div>
+  </div>
+
+  <div class="step" data-step="2" data-label="使い方">
+    <h3>1つのテーマは9つのステップでできている</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>ステップ</th><th>すること</th></tr></thead>
+      <tbody>
+        <tr><th>① 全体像</th><td>ひとことで、何の話かをつかむ</td></tr>
+        <tr><th>② 構造</th><td>どんな要素でできているかを図で確かめる</td></tr>
+        <tr><th>③ 機能</th><td>それぞれが何をするか</td></tr>
+        <tr><th>④ 仕組み</th><td>原因 → 結果、流れを矢印でたどる</td></tr>
+        <tr><th>⑤ つながり</th><td>前に学んだ知識と結びつける</td></tr>
+        <tr><th>⑥ 鍼灸臨床</th><td>施術の場面でどう役立つか</td></tr>
+        <tr><th>⑦ 思い出す</th><td>見ないで思い出す（ここが一番大事）</td></tr>
+        <tr><th>⑧ ノート</th><td>自分の言葉で書き直す</td></tr>
+        <tr><th>⑨ 確認問題</th><td>解いて、間違いを直す</td></tr>
+      </tbody>
+    </table></div>
+    <details class="more"><summary>画面のボタンの使い方</summary>
+      <ul>
+        <li><b>目次</b>：左上のボタン（パソコンでは左側に常に表示）。読んでいるテーマが色付きになる。</li>
+        <li><b>検索</b>：虫めがねのボタン。本文・図・用語から探せる。</li>
+        <li><b>学習記録</b>：本のボタン。進み具合・ブックマーク・苦手・ノートの書き出し・バックアップ。</li>
+        <li><b>表示と印刷</b>：「︙」ボタン。重要語句をまとめて隠す、文字サイズ、印刷・PDF保存。</li>
+        <li><b>マーカー</b>：本文の文字を選ぶと「マーカーを引く」が出る。引いたマーカーをタップすると消せる。</li>
+        <li><b>用語</b>：点線の下線がある言葉は、タップすると意味が出る。例：<dfn data-def="Activities of Daily Living（日常生活活動）。食事・移動・整容・更衣・排泄・入浴など、毎日の生活に欠かせない動作。">ADL</dfn></li>
+        <li><b>図</b>：「拡大」「名称を隠す」「画像で保存」ボタンがある。保存した画像はノートアプリに貼れる。</li>
+      </ul>
+    </details>
+    <aside class="link"><p>この教材は、教科書『リハビリテーション医学』第Ⅰ部 第1章「リハビリテーション医学・医療」（p.2〜24）の範囲に合わせています。</p></aside>
+  </div>
+
+  <div class="step" data-step="8">
+    <h3>学ぶ前の自分を記録する</h3>
+    <div class="note" data-id="u00-before" data-prompt="いま「リハビリ」と聞いて思い浮かぶことを書いておこう（だれが・どこで・何をする？）" data-hint="正しくなくてOK。最後のテーマを終えたら読み返して、どれだけ変わったか比べよう。"></div>
+  </div>
+</section>
+
+<!-- ===== 01_rehab.html ===== -->
+<section class="unit" id="u01" data-no="1" data-part="第1部 理念" data-title="リハビリテーションとは">
+  <header class="unit-head">
+    <p class="unit-part">第1部 理念</p>
+    <h2><span class="no">1</span>リハビリテーションとは</h2>
+  </header>
+
+  <div class="step" data-step="1">
+    <h3>「再び、適した状態にする」</h3>
+    <p class="lead">rehabilitation は <b class="key">re（再び）＋ habilis（適した）＋ ation（状態にする）</b>。もとの意味は「<b class="key">再び適した状態にする</b>」である。</p>
+    <div class="cards">
+      <div class="card"><h5>re</h5><p class="big">再び</p></div>
+      <div class="card"><h5>habilis</h5><p class="big">適した</p></div>
+      <div class="card"><h5>ation</h5><p class="big">状態にする</p></div>
+    </div>
+    <p>始まりは、<b class="key">第一次世界大戦</b>の戦傷者の社会復帰という意味で使われたことによる。</p>
+  </div>
+
+  <div class="step" data-step="2">
+    <h3>リハビリテーション医学の3つのキーワード</h3>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 500 138" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="リハビリテーション医学の3つのキーワード"><title>リハビリテーション医学の3つのキーワード</title><defs><marker id="g1-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g1-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g1-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g1-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="20" y="10" width="460" height="41" rx="10" class="bx"/><text x="250.0" y="30.5" text-anchor="middle">リハビリテーション医学</text><rect x="20.0" y="85" width="144.0" height="41" rx="10" class="bxb"/><text x="92.0" y="105.5" text-anchor="middle" class="m">機能の回復</text><rect x="178.0" y="85" width="144.0" height="41" rx="10" class="bxb"/><text x="250.0" y="105.5" text-anchor="middle" class="m">障害の克服</text><rect x="336.0" y="85" width="144.0" height="41" rx="10" class="bxk"/><text x="408.0" y="105.5" text-anchor="middle" class="m">活動を育む</text><path d="M250.0,53 C250.0,68.0 92.0,68.0 92.0,82" class="flk" marker-end="url(#g1-k)"/><path d="M250.0,53 L250.0,82" class="flk" marker-end="url(#g1-k)"/><path d="M250.0,53 C250.0,68.0 408.0,68.0 408.0,82" class="flk" marker-end="url(#g1-k)"/></svg></div>
+      <figcaption><b>図1-1 日本リハビリテーション医学会のキーワード</b>。オレンジの「活動を育む」が新しい目標。</figcaption>
+    </figure>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th></th><th>中身</th></tr></thead>
+      <tbody>
+        <tr><th>これまで</th><td>患者個人の身体・精神機能の改善、障害を克服するための<b>道具の使用や環境調整</b></td></tr>
+        <tr><th>これから</th><td>個人や組織の<b>社会活動</b>に焦点を当て、その活性化（＝<b class="key">活動を育む</b>）を進める</td></tr>
+      </tbody>
+    </table></div>
+    <details class="more"><summary>「リハビリ」という言葉の使い分け</summary>
+      <p>医学・医療では機能改善を目指す「治療（treatment）」、福祉・介護では機能維持を目的とした「場面（care）」の意味で使われることもある。混同を避けるため、学会は「リハビリテーション治療」「リハビリテーションマネジメント」のように<b>「リハビリテーション〇〇」</b>と使い分けることをすすめている。</p>
+    </details>
+  </div>
+
+  <div class="step" data-step="3">
+    <h3>リハビリテーション診療は「診断・治療・支援」</h3>
+    <figure class="fig">
+      <div class="canvas"><svg class="dg" viewBox="0 0 540 103" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="リハビリテーション診療の3つ"><title>リハビリテーション診療の3つ</title><defs><marker id="g2-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g2-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g2-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g2-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="10.0" y="10" width="156.0" height="83" rx="10" class="bx"/><text x="88.0" y="51.5" text-anchor="middle" class="m"><tspan x="88.0" dy="-1.28em">リハビリテー</tspan><tspan x="88.0" dy="1.28em">ション診断</tspan><tspan x="88.0" dy="1.28em">活動の予後を予測</tspan></text><path d="M169.0,51.5 L188.0,51.5" class="flk" marker-end="url(#g2-k)"/><rect x="192.0" y="10" width="156.0" height="83" rx="10" class="bxk"/><text x="270.0" y="51.5" text-anchor="middle" class="m"><tspan x="270.0" dy="-1.28em">リハビリテー</tspan><tspan x="270.0" dy="1.28em">ション治療</tspan><tspan x="270.0" dy="1.28em">活動を最良化する</tspan></text><path d="M351.0,51.5 L370.0,51.5" class="flk" marker-end="url(#g2-k)"/><rect x="374.0" y="10" width="156.0" height="83" rx="10" class="bx"/><text x="452.0" y="51.5" text-anchor="middle" class="m"><tspan x="452.0" dy="-1.28em">リハビリテー</tspan><tspan x="452.0" dy="1.28em">ション支援</tspan><tspan x="452.0" dy="1.28em">環境調整・社会資源</tspan></text></svg></div>
+      <figcaption><b>図1-2 リハビリテーション診療の3つのポイント</b>。急性期・回復期・生活期を通して行う。</figcaption>
+    </figure>
+    <div class="cards">
+      <div class="card"><h5>診断</h5><p>各種の診断法で、患者の<b class="key">活動の予後を予測</b>する（問診・身体所見・画像・生理学的検査・嚥下の検査など）</p></div>
+      <div class="card"><h5>治療</h5><p>予後予測にもとづき、<b class="key">活動を最良化</b>する（薬物療法・理学療法・作業療法・言語聴覚療法・電気刺激療法など）</p></div>
+      <div class="card"><h5>支援</h5><p>生活環境の調整や<b class="key">社会資源</b>を活用して支える</p></div>
+    </div>
+    <p class="small">介護保険では、リハビリテーションのアプローチを「<b class="key">リハビリテーションマネジメント</b>」とよぶ。</p>
+  </div>
+
+  <div class="step" data-step="4">
+    <h3>なぜ今、リハビリテーションが必要なのか</h3>
+    <p class="lead">日本のリハビリテーションの対象は、時代とともに<b class="key">子ども → 外傷 → 循環器病</b>へと移ってきた。</p>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 480 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="日本のリハビリテーションの対象の移り変わり"><title>日本のリハビリテーションの対象の移り変わり</title><defs><marker id="g3-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g3-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g3-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g3-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="52" y="10" width="418" height="39" rx="10" class="bx"/><text x="261.0" y="29.5" text-anchor="middle"></text><text x="66" y="29.5" text-anchor="start" class="m">脳性麻痺・ポリオの子どもの療育から始まる</text><circle cx="28" cy="29.5" r="13" class="num"/><text x="28" y="30.5" text-anchor="middle" class="w b m">1</text><path d="M28,44.5 L28,55" class="flk" marker-end="url(#g3-k)"/><rect x="52" y="59" width="418" height="39" rx="10" class="bx"/><text x="261.0" y="78.5" text-anchor="middle"></text><text x="66" y="78.5" text-anchor="start" class="m">戦傷・交通事故・労働災害などの外傷へ</text><circle cx="28" cy="78.5" r="13" class="num"/><text x="28" y="79.5" text-anchor="middle" class="w b m">2</text><path d="M28,93.5 L28,104" class="flk" marker-end="url(#g3-k)"/><rect x="52" y="108" width="418" height="60" rx="10" class="bxk"/><text x="261.0" y="138.0" text-anchor="middle"></text><text x="66" y="138.0" text-anchor="start" class="m"><tspan x="66" dy="-0.64em">いまの課題は脳卒中・心臓病（循環器病）</tspan><tspan x="66" dy="1.28em">2018年 循環器病対策基本法</tspan></text><circle cx="28" cy="138.0" r="13" class="numo"/><text x="28" y="139.0" text-anchor="middle" class="w b m">3</text></svg></div>
+      <figcaption><b>図1-3 対象の移り変わり</b></figcaption>
+    </figure>
+    <p>2018年12月には、脳卒中・心臓病などの循環器病対策の基本法（<b>循環器病対策基本法</b>）が定められた。</p>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 520 164" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="介護が必要になった原因"><title>介護が必要になった原因</title><defs><marker id="g5-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g5-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g5-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g5-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><text x="118" y="28" text-anchor="end" class="m nm">認知症</text><rect x="128" y="14" width="298.8" height="28" rx="3" class="bxk"/><text x="432.8" y="29" text-anchor="start" class="b m">16.6%</text><text x="118" y="70" text-anchor="end" class="m nm">脳血管疾患</text><rect x="128" y="56" width="289.8" height="28" rx="3" class="bxk"/><text x="423.8" y="71" text-anchor="start" class="b m">16.1%</text><text x="118" y="112" text-anchor="end" class="m nm">骨折・転倒</text><rect x="128" y="98" width="250.20000000000002" height="28" rx="3" class="bxg"/><text x="384.20000000000005" y="113" text-anchor="start" class="b m">13.9%</text><text x="260" y="150" text-anchor="middle" class="s tg">介護が必要になった主な原因（総数・2022年）</text></svg></div>
+      <figcaption><b>図1-4 介護が必要になった原因</b>（総数）。要介護者では認知症23.6%・脳血管疾患19.0%、要支援者では<b>関節疾患19.3%</b>が1位。要介護4・5では脳血管疾患が1位。</figcaption>
+    </figure>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 520 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="平均寿命と健康寿命の差"><title>平均寿命と健康寿命の差</title><defs><marker id="g4-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g4-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g4-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g4-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><text x="14" y="56" text-anchor="start" class="b">男性</text><rect x="110" y="34" width="218.04000000000002" height="22" rx="3" class="bxb"/><rect x="328.04" y="34" width="26.18999999999997" height="22" rx="3" class="bxk"/><text x="116" y="45" text-anchor="start" class="s">健康寿命 72.68年</text><text x="360.23" y="45" text-anchor="start" class="s">平均寿命 81.41年</text><text x="341.135" y="74" text-anchor="middle" class="s to b">約8.7年</text><text x="14" y="146" text-anchor="start" class="b">女性</text><rect x="110" y="124" width="226.14" height="22" rx="3" class="bxb"/><rect x="336.14" y="124" width="36.21000000000002" height="22" rx="3" class="bxk"/><text x="116" y="135" text-anchor="start" class="s">健康寿命 75.38年</text><text x="378.35" y="135" text-anchor="start" class="s">平均寿命 87.45年</text><text x="354.245" y="164" text-anchor="middle" class="s to b">約12.1年</text><text x="260" y="196" text-anchor="middle" class="s tg">橙の部分＝日常生活に制限のある期間（2019年）</text></svg></div>
+      <figcaption><b>図1-5 平均寿命と<dfn data-def="日常生活に制限のない期間のこと。">健康寿命</dfn>の差</b>。この「制限のある期間」を縮めることがリハビリテーションの役割の1つ。</figcaption>
+    </figure>
+    <details class="adv"><summary>VUCAの時代と、学び方・働き方の選択肢</summary>
+      <p>現代は VUCA（変動性・不確実性・複雑性・曖昧性）の時代といわれる。オンライン授業や在宅ワーク、デジタル機器の発展で、障害があっても学び方・働き方の選択肢が増えている。社会復帰を考えるときは、多くの選択肢があることに留意する。</p>
+    </details>
+  </div>
+
+  <div class="step" data-step="5">
+    <h3>つながり</h3>
+    <aside class="link">
+      <p>「活動を育む」の「活動」は、テーマ4のICFの「活動」と同じ言葉。リハビリテーションの目標は、病気そのものより<b>生活の中の活動</b>に向いている。</p>
+      <a class="jump" href="#u04">テーマ4 ICFの「活動」へ</a>
+      <a class="jump" href="#u05">テーマ5 急性期・回復期・生活期へ</a>
+    </aside>
+  </div>
+
+  <div class="step" data-step="6">
+    <h3>施術の場面で意識したいこと</h3>
+    <aside class="clinic">
+      <ul>
+        <li>患者さんの「痛い・動かない」だけでなく、<b>何ができなくて困っているか（活動）</b>、<b>どんな役割に戻りたいか（参加）</b>を聞く視点を持つ。</li>
+        <li>介護が必要になる原因の上位は認知症・脳血管疾患・骨折転倒・関節疾患。高齢の患者さんではこれらの既往や転倒歴を問診で確かめる。</li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="step" data-step="7">
+    <h3>見ないで言ってみよう</h3>
+    <div class="rq"><p class="rq-q">rehabilitation の語源を3つの部分に分けて説明できますか？</p>
+      <div class="rq-a">re（再び）＋habilis（適した）＋ation（状態にする）＝再び適した状態にする。第一次世界大戦の戦傷者の社会復帰から使われ始めた。</div></div>
+    <div class="rq"><p class="rq-q">日本リハビリテーション医学会の3つのキーワードは？ 新しい目標はどれ？</p>
+      <div class="rq-a">機能の回復・障害の克服・活動を育む。新しい目標は「活動を育む」。</div></div>
+    <div class="rq"><p class="rq-q">リハビリテーション診断・治療・支援を、それぞれ一言で。</p>
+      <div class="rq-a">診断＝活動の予後を予測。治療＝活動を最良化。支援＝生活環境の調整や社会資源の活用。</div></div>
+  </div>
+
+  <div class="step" data-step="8">
+    <h3>ノートにまとめる</h3>
+    <div class="summary"><h5>要点</h5><ul>
+      <li>語源：re（再び）＋habilis（適した）＋ation（状態にする）</li>
+      <li>キーワード：機能の回復・障害の克服・活動を育む（新しい目標）</li>
+      <li>診療：診断（予後予測）→ 治療（活動の最良化）＋ 支援（環境・社会資源）</li>
+      <li>介護保険では「リハビリテーションマネジメント」</li>
+      <li>対象：子ども（脳性麻痺・ポリオ）→ 外傷 → 循環器病（脳卒中・心臓病）</li>
+    </ul></div>
+    <figure class="fig w-s"><div class="canvas"><svg class="dg" viewBox="0 0 460 259" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="まとめ：リハビリテーションとは"><title>まとめ：リハビリテーションとは</title><defs><marker id="g16-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g16-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g16-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g16-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="20" y="10" width="420" height="64" rx="10" class="bx"/><text x="230.0" y="42.0" text-anchor="middle"><tspan x="230.0" dy="-0.64em">re（再び）＋habilis</tspan><tspan x="230.0" dy="1.28em">（適した）＋ation（状態にする）</tspan></text><rect x="20" y="108" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="128.5" text-anchor="middle"><tspan class="to b">機能の回復</tspan>・<tspan class="to b">障害の克服</tspan>・<tspan class="to b">活動を育む</tspan></text><path d="M230.0,76 L230.0,105" class="flk" marker-end="url(#g16-k)"/><rect x="20" y="183" width="420" height="64" rx="10" class="bx"/><text x="230.0" y="215.0" text-anchor="middle"><tspan x="230.0" dy="-0.64em">診断（予後予測）→ 治療（活動の最良化）</tspan><tspan x="230.0" dy="1.28em">→ 支援（環境・社会資源）</tspan></text><path d="M230.0,151 L230.0,180" class="flk" marker-end="url(#g16-k)"/></svg></div><figcaption><b>書き写し用まとめ図</b></figcaption></figure>
+    <div class="note" data-prompt="「リハビリ＝運動の訓練」と思っている人に、リハビリテーションの本当の意味をどう説明する？" data-hint="語源と「活動を育む」を使って、2〜3文で。"></div>
+  </div>
+
+  <div class="step" data-step="9">
+    <h3>確認問題</h3>
+    <div class="q mc" data-ans="3"><p class="stem">日本リハビリテーション医学会がリハビリテーション医学のキーワードとして挙げていないのはどれか。</p>
+      <ol class="opts"><li>機能の回復</li><li>障害の克服</li><li>疾病の根治</li><li>活動を育む</li></ol>
+      <div class="exp">キーワードは「機能の回復」「障害の克服」「活動を育む」の3つ。</div></div>
+    <div class="q mc" data-ans="2"><p class="stem">リハビリテーション診断の説明として正しいのはどれか。</p>
+      <ol class="opts"><li>生活環境を調整し社会資源を活用する</li><li>患者の活動の予後を予測する</li><li>介護保険でのアプローチをいう</li><li>活動を最良化していく</li></ol>
+      <div class="exp">診断＝活動の予後予測。1は支援、3はリハビリテーションマネジメント、4は治療。</div></div>
+    <div class="q fill"><p class="stem">介護が必要になった原因（2022年）は、要介護者では1位が<span class="fb" data-a="認知症"></span>、要支援者では1位が<span class="fb" data-a="関節疾患"></span>である。</p>
+      <div class="exp">要介護者：認知症23.6%・脳血管疾患19.0%。要支援者：関節疾患19.3%・高齢による衰弱17.4%。</div></div>
+    <div class="q write"><p class="stem">「健康寿命」とは何か。また平均寿命との差を縮めることがなぜ大切か説明しよう。</p>
+      <div class="exp"><b>模範解答例</b>：健康寿命は日常生活に制限のない期間。平均寿命との差は「日常生活に制限のある期間」（2019年で男性約9年・女性約12年）であり、この期間を縮めることが本人の生活の質を保ち、介護の必要を減らすことにつながる。</div></div>
+  </div>
+</section>
+
+<!-- ===== 02_society.html ===== -->
+<section class="unit" id="u02" data-no="2" data-part="第1部 理念" data-title="共生社会をつくる考え方">
+  <header class="unit-head">
+    <p class="unit-part">第1部 理念</p>
+    <h2><span class="no">2</span>共生社会をつくる考え方</h2>
+  </header>
+
+  <div class="step" data-step="1">
+    <h3>障害の有無にかかわらず、ともに暮らす</h3>
+    <p class="lead">リハビリテーションの成り立ちには、<b class="key">ノーマライゼーション</b>・<b class="key">自立生活運動</b>・<b class="key">バリアフリー</b>・<b class="key">ユニバーサルデザイン</b>という4つの考え方がかかわっている。</p>
+  </div>
+
+  <div class="step" data-step="2">
+    <h3>4つの考え方：いつ・どこで・何を</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>考え方</th><th>いつ・どこで</th><th>中身</th></tr></thead>
+      <tbody>
+        <tr><th>ノーマライゼーション</th><td><b class="key">1959年 デンマーク</b><br>（知的障害者福祉法）</td><td>障害の有無にかかわらず<b>同等な生活</b>を送り、ともに活躍できる社会を目指す</td></tr>
+        <tr><th>自立生活運動（IL運動）</th><td><b class="key">1960年代 アメリカ</b><br>1970年代に世界へ</td><td>障害者が自立した生活を送るために必要な<b>社会体制や意識の変革</b>を求める社会運動</td></tr>
+        <tr><th>バリアフリー</th><td>もとは<b>建築用語</b></td><td>社会参加の妨げになる物理的・社会的・制度的・心理的な<b>障壁を取り除く</b></td></tr>
+        <tr><th>ユニバーサルデザイン</th><td><b class="key">1985年 アメリカ</b></td><td>個人の違いにかかわらず、<b>最初から</b>できるだけ多くの人が利用できるように設計する</td></tr>
+      </tbody>
+    </table></div>
+    <details class="more"><summary>ノーマライゼーションの広がり</summary>
+      <p>デンマークの知的障害者福祉法で「ノーマライゼーション」という言葉が使われ、知的障害者に一般の人と同じ権利が保障された。いまでは身体障害者・精神障害者にも同じ考え方が広がっている。</p>
+    </details>
+  </div>
+
+  <div class="step" data-step="3">
+    <h3>バリアフリーとユニバーサルデザインの違い</h3>
+    <div class="cols cards">
+      <div class="card"><h5>バリアフリー＝あとから取り除く</h5><p>エレベーター・エスカレーター・スロープ・階段昇降機・多機能トイレ・点字ブロック・音響音声案内・ノンステップバス</p></div>
+      <div class="card"><h5>ユニバーサルデザイン＝はじめから誰もが</h5><p>ゆるやかなスロープ・多機能トイレ・<b>ピクトグラム</b>・点字・見やすいフォントや配色（カラーユニバーサルデザイン）</p></div>
+    </div>
+    <div class="box">
+      <p><b>ユニバーサルデザインの7原則</b></p>
+      <ol>
+        <li>誰もが公平に利用できる</li><li>自由に利用できる</li><li>使い方がわかりやすい</li><li>必要な情報がすぐに理解できる</li>
+        <li>簡単な誤りが危険につながらない</li><li>身体への負荷が少ない</li><li>十分な大きさ・広さが確保されている</li>
+      </ol>
+    </div>
+    <details class="more"><summary>デジタル機器による<dfn data-def="施設やサービスなどの利用のしやすさ。">アクセシビリティ</dfn>の例</summary>
+      <ul>
+        <li>上肢機能障害：高感度センサーによるキーボード入力</li>
+        <li>発声障害：合成音声による発声</li>
+        <li>視覚障害：表示文字の拡大・音訳・音声入力</li>
+        <li>聴覚障害：音声認識による画面表示</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="step" data-step="5">
+    <h3>つながり</h3>
+    <aside class="link">
+      <p>バリアフリーやユニバーサルデザインは、ICFでいう<b>環境因子</b>を「促進因子」に変える工夫といえる。</p>
+      <a class="jump" href="#u04">テーマ4 ICFの環境因子へ</a>
+    </aside>
+  </div>
+
+  <div class="step" data-step="6">
+    <h3>施術の場面で意識したいこと</h3>
+    <aside class="clinic">
+      <ul>
+        <li>治療院の入口の段差・ベッドの高さ・トイレなどは、障害のある人や高齢の人にとって<b>障壁</b>になりうる。</li>
+        <li>案内の文字の大きさ・配色・ピクトグラムなど、ユニバーサルデザインの視点で院内を見直すことができる。</li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="step" data-step="7">
+    <h3>見ないで言ってみよう</h3>
+    <div class="rq"><p class="rq-q">ノーマライゼーションは、何年に、どこの国の、何という法律から広まった？</p>
+      <div class="rq-a">1959年、デンマークの知的障害者福祉法。</div></div>
+    <div class="rq"><p class="rq-q">自立生活運動（IL運動）はいつ、どこで始まった？</p>
+      <div class="rq-a">1960年代のアメリカ。1970年代に世界に広がった。</div></div>
+    <div class="rq"><p class="rq-q">バリアフリーとユニバーサルデザインの違いを一言で。</p>
+      <div class="rq-a">バリアフリーは「障壁を取り除く」、ユニバーサルデザインは「最初からできるだけ多くの人が使えるように設計する」（1985年アメリカ、7原則）。</div></div>
+  </div>
+
+  <div class="step" data-step="8">
+    <h3>ノートにまとめる</h3>
+    <div class="summary"><h5>要点</h5><ul>
+      <li>ノーマライゼーション：1959年デンマーク・知的障害者福祉法</li>
+      <li>IL運動：1960年代アメリカ</li>
+      <li>バリアフリー：物理的・社会的・制度的・心理的な障壁の除去（もとは建築用語）</li>
+      <li>ユニバーサルデザイン：1985年アメリカ、7原則</li>
+    </ul></div>
+    <figure class="fig w-s"><div class="canvas"><svg class="dg" viewBox="0 0 460 259" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="まとめ：共生社会の考え方"><title>まとめ：共生社会の考え方</title><defs><marker id="g17-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g17-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g17-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g17-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="20" y="10" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="30.5" text-anchor="middle">ノーマライゼーション：1959年 デンマーク</text><rect x="20" y="85" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="105.5" text-anchor="middle">IL運動：1960年代 アメリカ</text><path d="M230.0,53 L230.0,82" class="flk" marker-end="url(#g17-k)"/><rect x="20.0" y="160" width="203.0" height="87" rx="10" class="bx"/><text x="121.5" y="203.5" text-anchor="middle"><tspan x="121.5" dy="-0.64em">バリアフリー：</tspan><tspan x="121.5" dy="1.28em">障壁を取り除く</tspan></text><rect x="237.0" y="160" width="203.0" height="87" rx="10" class="bx"/><text x="338.5" y="203.5" text-anchor="middle"><tspan x="338.5" dy="-1.28em">ユニバーサルデザイン：</tspan><tspan x="338.5" dy="1.28em">最初から誰もが</tspan><tspan x="338.5" dy="1.28em">（7原則）</tspan></text><path d="M230.0,128 C230.0,143.0 121.5,143.0 121.5,157" class="flk" marker-end="url(#g17-k)"/><path d="M230.0,128 C230.0,143.0 338.5,143.0 338.5,157" class="flk" marker-end="url(#g17-k)"/></svg></div><figcaption><b>書き写し用まとめ図</b></figcaption></figure>
+    <div class="note" data-prompt="身の回りで見つけた「バリアフリー」と「ユニバーサルデザイン」の例を1つずつ書き、なぜそちらに分類したか説明しよう"></div>
+  </div>
+
+  <div class="step" data-step="9">
+    <h3>確認問題</h3>
+    <div class="q mc" data-ans="1"><p class="stem">ノーマライゼーションについて正しいのはどれか。</p>
+      <ol class="opts"><li>デンマークの知的障害者福祉法を契機に広まった</li><li>1985年にアメリカで提唱された</li><li>もとは建築用語である</li><li>7つの原則がある</li></ol>
+      <div class="exp">ノーマライゼーションは1959年デンマーク。2と4はユニバーサルデザイン、3はバリアフリー。</div></div>
+    <div class="q mc" data-ans="4"><p class="stem">1960年代のアメリカで始まり、障害者の自立に必要な社会体制や意識の変革を求めた運動はどれか。</p>
+      <ol class="opts"><li>ノーマライゼーション</li><li>バリアフリー</li><li>地域リハビリテーション</li><li>自立生活運動</li></ol>
+      <div class="exp">自立生活運動（IL運動）。1970年代に世界的に広がった。</div></div>
+    <div class="q fill"><p class="stem">ユニバーサルデザインは<span class="fb" data-a="1985|1985年"></span>年にアメリカで提唱され、<span class="fb" data-a="7|7つ|七"></span>つの原則がある。</p>
+      <div class="exp">公平・自由・わかりやすい・情報がすぐわかる・誤りが危険につながらない・負荷が少ない・十分な大きさと広さ。</div></div>
+    <div class="q write"><p class="stem">バリアフリーの「障壁」にはどのような種類があるか、4つ挙げよう。</p>
+      <div class="exp"><b>模範解答例</b>：物理的・社会的・制度的・心理的な障壁。</div></div>
+  </div>
+</section>
+
+<!-- ===== 03_icidh.html ===== -->
+<section class="unit" id="u03" data-no="3" data-part="第2部 障害のとらえ方" data-title="障害の定義とICIDH">
+  <header class="unit-head">
+    <p class="unit-part">第2部 障害のとらえ方</p>
+    <h2><span class="no">3</span>障害の定義とICIDH</h2>
+  </header>
+
+  <div class="step" data-step="1">
+    <h3>障害は「体の損傷」だけではない</h3>
+    <p class="lead"><b class="key">障害</b>とは、身体の損傷だけでなく、個人の<b>活動</b>や<b>社会参加</b>の制限まで含む言葉である。</p>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 540 154" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="障害のとらえ方の3つのモデル"><title>障害のとらえ方の3つのモデル</title><defs><marker id="g7-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g7-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g7-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g7-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="10.0" y="10" width="166.66666666666666" height="134" rx="10" class="bx"/><rect x="10.0" y="10" width="166.66666666666666" height="34" rx="10" class="bxd"/><text x="93.33333333333333" y="28.0" text-anchor="middle" class="w b m nm">医学モデル</text><text x="22.0" y="94.0" text-anchor="start" class="m"><tspan x="22.0" dy="-1.92em">障害の原因は個</tspan><tspan x="22.0" dy="1.28em">人の病気・けが</tspan><tspan x="22.0" dy="1.28em">→ 治療・</tspan><tspan x="22.0" dy="1.28em">行動を変える</tspan></text><rect x="186.66666666666666" y="10" width="166.66666666666666" height="134" rx="10" class="bx"/><rect x="186.66666666666666" y="10" width="166.66666666666666" height="34" rx="10" class="bxd"/><text x="270.0" y="28.0" text-anchor="middle" class="w b m nm">社会モデル</text><text x="198.66666666666666" y="94.0" text-anchor="start" class="m"><tspan x="198.66666666666666" dy="-1.92em">障害の原因は</tspan><tspan x="198.66666666666666" dy="1.28em">社会の環境</tspan><tspan x="198.66666666666666" dy="1.28em">→ 建物・</tspan><tspan x="198.66666666666666" dy="1.28em">法律を変える</tspan></text><rect x="363.3333333333333" y="10" width="166.66666666666666" height="134" rx="10" class="bx"/><rect x="363.3333333333333" y="10" width="166.66666666666666" height="34" rx="10" class="bxk"/><text x="446.66666666666663" y="28.0" text-anchor="middle" class="b m nm">ICF（2001年）</text><text x="375.3333333333333" y="94.0" text-anchor="start" class="m"><tspan x="375.3333333333333" dy="-1.28em">医学モデルと社</tspan><tspan x="375.3333333333333" dy="1.28em">会モデルの中間</tspan><tspan x="375.3333333333333" dy="1.28em">すべての人に使える</tspan></text></svg></div>
+      <figcaption><b>図3-1 障害のとらえ方</b>。医学モデルは個人を、社会モデルは環境（社会）を対象にする。</figcaption>
+    </figure>
+    <details class="more"><summary>社会モデルで改善すべき点</summary>
+      <p>障害者への偏見や差別、バリアフリーでない建物、経済格差など。</p>
+    </details>
+  </div>
+
+  <div class="step" data-step="2">
+    <h3>日本の法律による3つの障害</h3>
+    <p>障害者基本法では、障害者を「身体障害、知的障害又は精神障害があるため、<b>継続的に</b>日常生活又は社会生活に相当な制限を受ける者」と定義している。</p>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th></th><th>中身</th><th>人数（推計）</th></tr></thead>
+      <tbody>
+        <tr><th>身体障害</th><td>①視覚 ②聴覚・平衡 ③音声・言語・そしゃく ④<b class="key">肢体不自由</b> ⑤<b class="key">内部障害</b>。18歳以上を身体障害者、18歳未満を身体障害児</td><td>約436万人</td></tr>
+        <tr><th>精神障害</th><td>統合失調症・依存症・その他の精神疾患など。<b>発達障害</b>（自閉症・アスペルガー症候群・学習障害・注意欠陥多動性障害など）は発達障害者支援法で定義</td><td>約419万人</td></tr>
+        <tr><th>知的障害</th><td><b class="key">発達期（おおむね18歳まで）</b>に発症し、知的機能と適応機能に障害がある</td><td>約109万人</td></tr>
+      </tbody>
+    </table></div>
+    <div class="box"><p><b>内部障害の7つ</b>：心臓・じん臓・呼吸・ぼうこう又は直腸・小腸・ヒト免疫不全ウイルスによる免疫・肝臓の機能障害</p></div>
+    <p class="small">複数の障害を併せもつ人もいるが、国民の<b>約7.6%</b>がなんらかの障害をもつと推測される。</p>
+  </div>
+
+  <div class="step" data-step="3">
+    <h3>ICIDH（国際障害分類・1980年）の3つのレベル</h3>
+    <figure class="fig">
+      <div class="canvas"><svg class="dg" viewBox="0 0 540 82" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ICIDH（国際障害分類）の障害の3つのレベル"><title>ICIDH（国際障害分類）の障害の3つのレベル</title><defs><marker id="g6-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g6-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g6-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g6-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="10.0" y="10" width="110.5" height="62" rx="10" class="bx"/><text x="65.25" y="41.0" text-anchor="middle" class="m">疾患・変調</text><path d="M123.5,41.0 L142.5,41.0" class="flk" marker-end="url(#g6-k)"/><rect x="146.5" y="10" width="110.5" height="62" rx="10" class="bxb"/><text x="201.75" y="41.0" text-anchor="middle" class="m"><tspan x="201.75" dy="-0.64em">機能障害・</tspan><tspan x="201.75" dy="1.28em">形態異常</tspan></text><path d="M260.0,41.0 L279.0,41.0" class="flk" marker-end="url(#g6-k)"/><rect x="283.0" y="10" width="110.5" height="62" rx="10" class="bxb"/><text x="338.25" y="41.0" text-anchor="middle" class="m">能力低下</text><path d="M396.5,41.0 L415.5,41.0" class="flk" marker-end="url(#g6-k)"/><rect x="419.5" y="10" width="110.5" height="62" rx="10" class="bxb"/><text x="474.75" y="41.0" text-anchor="middle" class="m">社会的不利</text></svg></div>
+      <figcaption><b>図3-2 ICIDHの障害構造モデル</b>（WHO 1980年）</figcaption>
+    </figure>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>レベル</th><th>意味</th><th>例</th></tr></thead>
+      <tbody>
+        <tr><th>機能障害・形態異常<br><span class="small">（一次）</span></th><td>疾患や外傷による障害</td><td>運動麻痺・感覚障害・筋力低下・関節可動域制限／四肢の切断・変形</td></tr>
+        <tr><th>能力低下<br><span class="small">（二次）</span></th><td>日常生活に必要な能力の低下</td><td>片麻痺による歩行困難、関節リウマチの手指変形によるボタン留め困難</td></tr>
+        <tr><th>社会的不利<br><span class="small">（三次）</span></th><td>社会参加の困難</td><td>学校・職場に行けない、余暇活動に参加できない</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="step" data-step="4">
+    <h3>社会的不利は「環境」と「役割」で変わる</h3>
+    <div class="box">
+      <p><b>例</b>　建築現場の作業員が交通事故で片脚の下腿切断 → 義足で歩けるようになった（能力は回復）→ それでも前の仕事に戻れず退職（<b class="key">社会的不利</b>）。</p>
+      <p>もし前の仕事がデスクワークなら、職場復帰できた可能性が高い。<b>社会的不利は、周囲の環境やその人の役割・希望で変わる。</b></p>
+    </div>
+    <h4>ICIDHの問題点</h4>
+    <div class="cards">
+      <div class="card"><h5>1</h5><p>障害者の<b class="key">マイナス面だけ</b>に着目している</p></div>
+      <div class="card"><h5>2</h5><p>個人に焦点が当たり、周囲の人・環境・制度の問題が検討されにくい</p></div>
+      <div class="card"><h5>3</h5><p>機能障害 → 能力低下 → 社会的不利と<b class="key">一方向</b>に進むという誤解を招く</p></div>
+    </div>
+    <p class="small">「脳卒中なら<b>必ず</b>片麻痺になり、<b>必ず</b>歩けなくなり、<b>必ず</b>職場復帰できない」という誤解。この問題点からICFがつくられた。</p>
+  </div>
+
+  <div class="step" data-step="5">
+    <h3>つながり</h3>
+    <aside class="link">
+      <p>ICIDHの3つのレベルは、ICFでは「心身機能・身体構造」「活動」「参加」に置きかわった。マイナスの言葉が中立の言葉になったことに注目。</p>
+      <a class="jump" href="#u04">テーマ4 ICFへ進む</a>
+    </aside>
+  </div>
+
+  <div class="step" data-step="7">
+    <h3>見ないで言ってみよう</h3>
+    <div class="rq"><p class="rq-q">ICIDHの障害の3つのレベルを順に言えますか？ それぞれの例も1つずつ。</p>
+      <div class="rq-a">機能障害・形態異常（麻痺・切断）→ 能力低下（歩けない）→ 社会的不利（就労できない）。</div></div>
+    <div class="rq"><p class="rq-q">身体障害の5つの種類と、内部障害の7つは？</p>
+      <div class="rq-a">視覚／聴覚・平衡／音声・言語・そしゃく／肢体不自由／内部障害。内部障害＝心臓・じん臓・呼吸・ぼうこう又は直腸・小腸・HIVによる免疫・肝臓。</div></div>
+    <div class="rq"><p class="rq-q">ICIDHの問題点を3つ。</p>
+      <div class="rq-a">マイナス面だけに着目／環境や制度が検討されにくい／一方向に進むという誤解。</div></div>
+  </div>
+
+  <div class="step" data-step="8">
+    <h3>ノートにまとめる</h3>
+    <div class="summary"><h5>要点</h5><ul>
+      <li>障害＝身体の損傷＋活動・社会参加の制限</li>
+      <li>医学モデル（個人）／社会モデル（環境）</li>
+      <li>身体障害・精神障害・知的障害。国民の約7.6%</li>
+      <li>ICIDH（1980年）：機能障害・形態異常 → 能力低下 → 社会的不利</li>
+      <li>問題点：マイナス面だけ・環境が見えない・一方向の誤解 → ICFへ</li>
+    </ul></div>
+    <figure class="fig w-s"><div class="canvas"><svg class="dg" viewBox="0 0 460 288" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="まとめ：ICIDH"><title>まとめ：ICIDH</title><defs><marker id="g18-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g18-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g18-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g18-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="20" y="10" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="30.5" text-anchor="middle">ICIDH（1980年）</text><rect x="20" y="85" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="105.5" text-anchor="middle">機能障害・形態異常 → 能力低下 → 社会的不利</text><path d="M230.0,53 L230.0,82" class="flk" marker-end="url(#g18-k)"/><rect x="20" y="160" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="180.5" text-anchor="middle">問題：マイナス面だけ・一方向・環境が見えない</text><path d="M230.0,128 L230.0,157" class="flk" marker-end="url(#g18-k)"/><rect x="20" y="235" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="255.5" text-anchor="middle">→ ICF（2001年）へ</text><path d="M230.0,203 L230.0,232" class="flk" marker-end="url(#g18-k)"/></svg></div><figcaption><b>書き写し用まとめ図</b></figcaption></figure>
+    <div class="note" data-prompt="「下腿切断の作業員」の例を、ICIDHの3つのレベルに当てはめて書いてみよう。デスクワークの人ならどこが変わる？"></div>
+  </div>
+
+  <div class="step" data-step="9">
+    <h3>確認問題</h3>
+    <div class="q mc" data-ans="3"><p class="stem">ICIDHで「能力低下」にあたるのはどれか。</p>
+      <ol class="opts"><li>片麻痺</li><li>下腿切断</li><li>ボタンが留められない</li><li>復職できない</li></ol>
+      <div class="exp">1・2は機能障害・形態異常、4は社会的不利。</div></div>
+    <div class="q mc" data-ans="2"><p class="stem">身体障害者福祉法の内部障害に含まれないのはどれか。</p>
+      <ol class="opts"><li>じん臓機能障害</li><li>音声機能障害</li><li>小腸機能障害</li><li>肝臓機能障害</li></ol>
+      <div class="exp">音声・言語・そしゃく機能の障害は内部障害とは別の区分。</div></div>
+    <div class="q fill"><p class="stem">ICIDHは<span class="fb" data-a="1980|1980年"></span>年にWHOが作成した。知的障害は発達期（おおむね<span class="fb" data-a="18|18歳"></span>歳まで）に発症する。</p>
+      <div class="exp">ICIDHに代わるICFは2001年に採択された。</div></div>
+    <div class="q write"><p class="stem">ICIDHが招きやすい「一方向の誤解」とはどのようなものか、脳卒中を例に説明しよう。</p>
+      <div class="exp"><b>模範解答例</b>：脳卒中なら必ず片麻痺（機能障害）になり、必ず歩けなくなり（能力低下）、必ず職場復帰できない（社会的不利）と考えてしまう誤解。実際には環境や役割によって社会的不利は変わる。</div></div>
+  </div>
+</section>
+
+<!-- ===== 04_icf.html ===== -->
+<section class="unit" id="u04" data-no="4" data-part="第2部 障害のとらえ方" data-title="ICF（国際生活機能分類）">
+  <header class="unit-head">
+    <p class="unit-part">第2部 障害のとらえ方</p>
+    <h2><span class="no">4</span>ICF（国際生活機能分類）</h2>
+  </header>
+
+  <div class="step" data-step="1">
+    <h3>すべての人の「生活」を、プラス面も含めて見る</h3>
+    <p class="lead"><b class="key">ICF</b>は2001年にWHO総会で採択された分類。障害の有無にかかわらず<b class="key">すべての人</b>に使え、6つの要素が<b class="key">互いに影響し合う</b>ととらえる。</p>
+    <div class="cards">
+      <div class="card"><h5>ICIDH（1980年）</h5><p>個人の<b>障害</b>（病気などの結果）に着目。マイナス面・一方向</p></div>
+      <div class="card"><h5>ICF（2001年）</h5><p>個人の<b>健康の構成要素</b>に着目。プラス面も考えやすい。医学モデルと社会モデルの<b class="key">中間</b></p></div>
+    </div>
+  </div>
+
+  <div class="step" data-step="2">
+    <h3>ICFの生活機能モデル</h3>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 520 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ICFの生活機能モデル"><title>ICFの生活機能モデル</title><defs><marker id="g8-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g8-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g8-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g8-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="170" y="10" width="180" height="58" rx="10" class="bxd"/><text x="260.0" y="39.0" text-anchor="middle" class="w b m nm"><tspan x="260.0" dy="-0.64em">健康状態</tspan><tspan x="260.0" dy="1.28em">病気・けが・加齢など</tspan></text><rect x="4" y="92" width="512" height="112" rx="12" class="hlz"/><text x="14" y="104" text-anchor="start" class="to b s">生活機能</text><rect x="12" y="114" width="150" height="80" rx="10" class="bx"/><text x="87" y="142" text-anchor="middle" class="b m nm"><tspan x="87" dy="-0.64em">心身機能・</tspan><tspan x="87" dy="1.28em">身体構造</tspan></text><text x="87" y="178" text-anchor="middle" class="s tg">麻痺・関節の動き</text><rect x="185" y="114" width="150" height="80" rx="10" class="bxk"/><text x="260" y="142" text-anchor="middle" class="b m nm">活動</text><text x="260" y="178" text-anchor="middle" class="s tg">ADL・家事・仕事</text><rect x="358" y="114" width="150" height="80" rx="10" class="bx"/><text x="433" y="142" text-anchor="middle" class="b m nm">参加</text><text x="433" y="178" text-anchor="middle" class="s tg">家庭・職場・地域</text><path d="M165,154 L182,154" class="flk" marker-end="url(#g8-k)" marker-start="url(#g8-k)"/><path d="M338,154 L355,154" class="flk" marker-end="url(#g8-k)" marker-start="url(#g8-k)"/><path d="M260,72 L260,110" class="flk" marker-end="url(#g8-k)" marker-start="url(#g8-k)"/><path d="M87,198 V226 H433 V198" class="ln"/><path d="M260,198 V226" class="ln"/><path d="M150,228 L150,252" class="flk" marker-end="url(#g8-k)" marker-start="url(#g8-k)"/><path d="M370,228 L370,252" class="flk" marker-end="url(#g8-k)" marker-start="url(#g8-k)"/><rect x="40" y="256" width="200" height="58" rx="10" class="bxb"/><text x="140.0" y="285.0" text-anchor="middle" class="b m nm"><tspan x="140.0" dy="-0.64em">環境因子</tspan><tspan x="140.0" dy="1.28em">物・人・制度</tspan></text><rect x="280" y="256" width="200" height="58" rx="10" class="bxb"/><text x="380.0" y="285.0" text-anchor="middle" class="b m nm"><tspan x="380.0" dy="-0.64em">個人因子</tspan><tspan x="380.0" dy="1.28em">年齢・生活歴・価値観</tspan></text><text x="260" y="332" text-anchor="middle" class="s tg b">背景因子</text></svg></div>
+      <figcaption><b>図4-1 ICFの生活機能モデル</b>。点線の枠が「生活機能」、下の2つが「背景因子」。矢印はすべて両向き。</figcaption>
+    </figure>
+    <p>生活機能（<b class="key">心身機能・身体構造／活動／参加</b>）と、背景因子（<b class="key">環境因子／個人因子</b>）に、<b class="key">健康状態</b>を加えたものが生活機能モデルである。</p>
+  </div>
+
+  <div class="step" data-step="3">
+    <h3>6つの要素の中身</h3>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>要素</th><th>中身・例</th></tr></thead>
+      <tbody>
+        <tr><th>健康状態</th><td>疾患・外傷・不調だけでなく、<b>ストレス・加齢・妊娠</b>なども含む</td></tr>
+        <tr><th>心身機能・身体構造</th><td>心身機能＝手足の運動・視覚聴覚などの感覚・臓器の働き・精神状態／身体構造＝四肢や筋、心臓・肺・胃などの臓器</td></tr>
+        <tr><th>活動</th><td>生活にかかわる個人の行動。ADL（食事・移動・整容・更衣・排泄・入浴）、家事・就労・余暇活動。<b class="key">「できる活動」と「している活動」</b>に分けてとらえる</td></tr>
+        <tr><th>参加</th><td>家庭・職場・地域社会にかかわり、<b>役割を果たす</b>こと（親としての責務、仕事、町内会への参加など）</td></tr>
+        <tr><th>環境因子</th><td>物的環境（建物・道路・<b>杖・車いすなどの福祉用具</b>）、人的環境（家族・友人・同僚・地域住民）、社会的環境（医療・介護・福祉などの制度、周囲の態度）</td></tr>
+        <tr><th>個人因子</th><td>年齢・性別・体力・生活歴（学歴・職歴）・人種・価値観・ライフスタイルなど。「個性」に近い</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cols cards">
+      <div class="card"><h5>促進因子</h5><p>環境因子が生活機能に<b>プラス</b>の影響を与える場合</p></div>
+      <div class="card"><h5>阻害因子</h5><p>環境因子が生活機能に<b>マイナス</b>の影響を与える場合</p></div>
+    </div>
+  </div>
+
+  <div class="step" data-step="4">
+    <h3>「互いに影響し合う」を例でたどる</h3>
+    <div class="box">
+      <p><b>例</b>　脳卒中（健康状態）で右片麻痺（心身機能）→ 歩行に介助が必要（活動）→ 仕事に行けない（参加）。</p>
+      <p>ここで<b>杖と手すり（環境因子・促進因子）</b>が加わると歩けるようになり、職場の理解（環境因子）でデスクワークに復帰（参加）。復帰して外出が増えると、体力（心身機能）も保たれる。</p>
+      <p>→ 矢印は<b class="key">どこからでも、どちら向きにも</b>働く。ここがICIDHとの大きな違い。</p>
+    </div>
+    <details class="more"><summary>ICFはどこで使われる？</summary>
+      <p>健康に関する分類だが、教育・労働・経済・社会保障・環境整備などの取り組みにも応用されている。医療・福祉・教育・就労などで「個性の尊重」が強調され、多様性の促進も課題とされる。</p>
+    </details>
+  </div>
+
+  <div class="step" data-step="5">
+    <h3>つながり</h3>
+    <aside class="link">
+      <p>ICIDHの「機能障害・形態異常／能力低下／社会的不利」が、ICFの「心身機能・身体構造／活動／参加」に対応する。</p>
+      <a class="jump" href="#u03">テーマ3 ICIDHに戻る</a>
+      <a class="jump" href="#u02">テーマ2 バリアフリー（環境因子を変える工夫）</a>
+    </aside>
+  </div>
+
+  <div class="step" data-step="6">
+    <h3>施術の場面で意識したいこと</h3>
+    <aside class="clinic">
+      <ul>
+        <li>問診では、痛みや動きにくさ（心身機能）だけでなく、<b>生活で何ができないか（活動）</b>、<b>どんな役割を果たしたいか（参加）</b>も聞く。</li>
+        <li>家族の協力・住まい・使っている福祉用具（環境因子）や、仕事・価値観（個人因子）も、その人の状態を左右する。</li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="step" data-step="7">
+    <h3>見ないで言ってみよう</h3>
+    <div class="rq"><p class="rq-q">ICFの6つの要素を、図の位置どおりに言えますか？</p>
+      <div class="rq-a">上：健康状態。中段（生活機能）：心身機能・身体構造／活動／参加。下段（背景因子）：環境因子／個人因子。</div></div>
+    <div class="rq"><p class="rq-q">杖・車いす・家族の態度・介護保険制度は、どの要素？</p>
+      <div class="rq-a">すべて環境因子（物的・人的・社会的環境）。プラスに働けば促進因子、マイナスなら阻害因子。</div></div>
+    <div class="rq"><p class="rq-q">ICFで「活動」はどのように2つに分けてとらえる？</p>
+      <div class="rq-a">「できる活動」と「している活動」。</div></div>
+  </div>
+
+  <div class="step" data-step="8">
+    <h3>ノートにまとめる</h3>
+    <div class="summary"><h5>要点</h5><ul>
+      <li>ICF：2001年WHO採択、すべての人に使える、医学モデルと社会モデルの中間</li>
+      <li>生活機能＝心身機能・身体構造／活動／参加</li>
+      <li>背景因子＝環境因子（物・人・制度）／個人因子（個性）＋健康状態</li>
+      <li>環境因子：促進因子（＋）と阻害因子（−）</li>
+      <li>すべての要素が互いに影響し合う（両向きの矢印）</li>
+    </ul></div>
+    <figure class="fig w-s"><div class="canvas"><svg class="dg" viewBox="0 0 460 236" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="まとめ：ICF"><title>まとめ：ICF</title><defs><marker id="g19-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g19-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g19-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g19-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="20" y="10" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="30.5" text-anchor="middle">健康状態</text><rect x="20.0" y="85" width="130.66666666666666" height="64" rx="10" class="bx"/><text x="85.33333333333333" y="117.0" text-anchor="middle" class="m"><tspan x="85.33333333333333" dy="-0.64em">心身機能・</tspan><tspan x="85.33333333333333" dy="1.28em">身体構造</tspan></text><rect x="164.66666666666666" y="85" width="130.66666666666666" height="64" rx="10" class="bx"/><text x="230.0" y="117.0" text-anchor="middle" class="m">活動</text><rect x="309.3333333333333" y="85" width="130.66666666666666" height="64" rx="10" class="bx"/><text x="374.66666666666663" y="117.0" text-anchor="middle" class="m">参加</text><path d="M230.0,53 C230.0,68.0 85.33333333333333,68.0 85.33333333333333,82" class="flk" marker-end="url(#g19-k)"/><path d="M230.0,53 L230.0,82" class="flk" marker-end="url(#g19-k)"/><path d="M230.0,53 C230.0,68.0 374.66666666666663,68.0 374.66666666666663,82" class="flk" marker-end="url(#g19-k)"/><rect x="20.0" y="183" width="203.0" height="41" rx="10" class="bx"/><text x="121.5" y="203.5" text-anchor="middle">環境因子</text><rect x="237.0" y="183" width="203.0" height="41" rx="10" class="bx"/><text x="338.5" y="203.5" text-anchor="middle">個人因子</text><path d="M85.33333333333333,151 C85.33333333333333,166.0 121.5,166.0 121.5,180" class="flk" marker-end="url(#g19-k)"/><path d="M85.33333333333333,151 C85.33333333333333,166.0 338.5,166.0 338.5,180" class="flk" marker-end="url(#g19-k)"/><path d="M230.0,151 C230.0,166.0 121.5,166.0 121.5,180" class="flk" marker-end="url(#g19-k)"/><path d="M230.0,151 C230.0,166.0 338.5,166.0 338.5,180" class="flk" marker-end="url(#g19-k)"/><path d="M374.66666666666663,151 C374.66666666666663,166.0 121.5,166.0 121.5,180" class="flk" marker-end="url(#g19-k)"/><path d="M374.66666666666663,151 C374.66666666666663,166.0 338.5,166.0 338.5,180" class="flk" marker-end="url(#g19-k)"/></svg></div><figcaption><b>書き写し用まとめ図</b></figcaption></figure>
+    <div class="note" data-prompt="身近な人（または架空の患者）を1人想定し、ICFの6つの要素にそれぞれ1つずつ情報を書き込んでみよう" data-hint="環境因子は「促進」か「阻害」かも書き添える。"></div>
+  </div>
+
+  <div class="step" data-step="9">
+    <h3>確認問題</h3>
+    <div class="q mc" data-ans="4"><p class="stem">ICFで背景因子に含まれるのはどれか。</p>
+      <ol class="opts"><li>活動</li><li>参加</li><li>心身機能</li><li>個人因子</li></ol>
+      <div class="exp">背景因子は環境因子と個人因子。活動・参加・心身機能は生活機能。</div></div>
+    <div class="q mc" data-ans="1"><p class="stem">ICFで環境因子に分類されるのはどれか。</p>
+      <ol class="opts"><li>車いす</li><li>年齢</li><li>価値観</li><li>町内会への参加</li></ol>
+      <div class="exp">車いすなどの福祉用具は物的環境。年齢・価値観は個人因子、町内会への参加は参加。</div></div>
+    <div class="q mc" data-ans="2"><p class="stem">ICFについて誤っているのはどれか。</p>
+      <ol class="opts"><li>2001年にWHO総会で採択された</li><li>障害のある人だけを対象にする</li><li>健康状態には加齢や妊娠も含まれる</li><li>要素どうしは互いに影響し合う</li></ol>
+      <div class="exp">ICFは障害の有無にかかわらずすべての人に適用できる。</div></div>
+    <div class="q write"><p class="stem">ICIDHと比べたときのICFの特徴を2つ挙げよう。</p>
+      <div class="exp"><b>模範解答例</b>：すべての人に使え、プラス面にも目を向けられる。環境因子・個人因子を含み、要素どうしが互いに影響し合う（一方向ではない）。</div></div>
+  </div>
+</section>
+
+<!-- ===== 05_field_phase.html ===== -->
+<section class="unit" id="u05" data-no="5" data-part="第3部 支えるしくみ" data-title="リハビリテーションの分野と時期">
+  <header class="unit-head">
+    <p class="unit-part">第3部 支えるしくみ</p>
+    <h2><span class="no">5</span>リハビリテーションの分野と時期</h2>
+  </header>
+
+  <div class="step" data-step="1">
+    <h3>病院の訓練室の外にもリハビリテーションはある</h3>
+    <p class="lead">リハビリテーションには<b class="key">5つの分野</b>があり、医療としてのリハビリテーションは<b class="key">急性期・回復期・生活期</b>の3つの時期に分けて考える。</p>
+  </div>
+
+  <div class="step" data-step="2">
+    <h3>5つの分野は「誰と連携するか」で覚える</h3>
+    <figure class="fig">
+      <div class="canvas"><svg class="dg" viewBox="0 0 540 235" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="リハビリテーションの5つの分野"><title>リハビリテーションの5つの分野</title><defs><marker id="g9-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g9-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g9-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g9-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="10.0" y="10" width="166.66666666666666" height="92" rx="10" class="bx"/><rect x="10.0" y="10" width="166.66666666666666" height="34" rx="10" class="bxd"/><text x="93.33333333333333" y="28.0" text-anchor="middle" class="w b m nm">医学的</text><text x="22.0" y="73.0" text-anchor="start" class="m"><tspan x="22.0" dy="-0.64em">病院での治療</tspan><tspan x="22.0" dy="1.28em">医療職どうしで連携</tspan></text><rect x="186.66666666666666" y="10" width="166.66666666666666" height="92" rx="10" class="bx"/><rect x="186.66666666666666" y="10" width="166.66666666666666" height="34" rx="10" class="bxd"/><text x="270.0" y="28.0" text-anchor="middle" class="w b m nm">教育的</text><text x="198.66666666666666" y="73.0" text-anchor="start" class="m"><tspan x="198.66666666666666" dy="-0.64em">能力の向上と自己実現</tspan><tspan x="198.66666666666666" dy="1.28em">生涯教育も含む</tspan></text><rect x="363.3333333333333" y="10" width="166.66666666666666" height="92" rx="10" class="bx"/><rect x="363.3333333333333" y="10" width="166.66666666666666" height="34" rx="10" class="bxd"/><text x="446.66666666666663" y="28.0" text-anchor="middle" class="w b m nm">職業的</text><text x="375.3333333333333" y="73.0" text-anchor="start" class="m"><tspan x="375.3333333333333" dy="-0.64em">働く・働き続ける</tspan><tspan x="375.3333333333333" dy="1.28em">ハローワークと連携</tspan></text><rect x="10.0" y="112" width="166.66666666666666" height="113" rx="10" class="bx"/><rect x="10.0" y="112" width="166.66666666666666" height="34" rx="10" class="bxd"/><text x="93.33333333333333" y="130.0" text-anchor="middle" class="w b m nm">社会的</text><text x="22.0" y="185.5" text-anchor="start" class="m"><tspan x="22.0" dy="-0.64em">社会生活の能力</tspan><tspan x="22.0" dy="1.28em">地域住民・行政と</tspan></text><rect x="186.66666666666666" y="112" width="166.66666666666666" height="113" rx="10" class="bx"/><rect x="186.66666666666666" y="112" width="166.66666666666666" height="34" rx="10" class="bxd"/><text x="270.0" y="130.0" text-anchor="middle" class="w b m nm">工学的</text><text x="198.66666666666666" y="185.5" text-anchor="start" class="m"><tspan x="198.66666666666666" dy="-1.28em">義肢装具・</tspan><tspan x="198.66666666666666" dy="1.28em">機器・住宅改修</tspan><tspan x="198.66666666666666" dy="1.28em">義肢装具士と</tspan></text></svg></div>
+      <figcaption><b>図5-1 リハビリテーションの5つの分野</b></figcaption>
+    </figure>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>分野</th><th>目的</th><th>連携の相手</th></tr></thead>
+      <tbody>
+        <tr><th>医学的</th><td>障害を治療し、社会復帰・社会参加などの活動を「育む」</td><td>医師・看護師・PT・OT・STなど医療職</td></tr>
+        <tr><th>教育的</th><td>能力を高め、すべての人が<b>自己実現</b>できるように。障害児教育だけでなく生涯教育も含む</td><td>医療関係者と<b>教育関係者</b></td></tr>
+        <tr><th>職業的</th><td>働きがいのある仕事に就き、続ける（評価・職業訓練・職場紹介・職業指導）。<b>障害者雇用促進法・障害者総合支援法</b>にもとづく</td><td>医療・福祉・<b class="key">ハローワーク</b>・就労先</td></tr>
+        <tr><th>社会的</th><td>社会生活を送る能力を高め、社会制度の改善も目指す</td><td>本人・家族・地域住民・福祉・行政</td></tr>
+        <tr><th>工学的</th><td>義肢装具・コミュニケーション機器・家屋改修・バリアフリー化</td><td><b class="key">義肢装具士</b>・福祉用具業者・改修業者</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="step" data-step="3">
+    <h3>3つの時期（フェーズ）</h3>
+    <figure class="fig">
+      <div class="canvas"><svg class="dg" viewBox="0 0 540 124" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="リハビリテーションの3つの時期"><title>リハビリテーションの3つの時期</title><defs><marker id="g10-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g10-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g10-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g10-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="10.0" y="10" width="156.0" height="104" rx="10" class="bx"/><text x="88.0" y="62.0" text-anchor="middle" class="m"><tspan x="88.0" dy="-1.92em">急性期</tspan><tspan x="88.0" dy="1.28em">原疾患の治</tspan><tspan x="88.0" dy="1.28em">療が最優先</tspan><tspan x="88.0" dy="1.28em">並行して早期離床</tspan></text><path d="M169.0,62.0 L188.0,62.0" class="flk" marker-end="url(#g10-k)" marker-start="url(#g10-k)"/><rect x="192.0" y="10" width="156.0" height="104" rx="10" class="bxk"/><text x="270.0" y="62.0" text-anchor="middle" class="m"><tspan x="270.0" dy="-1.92em">回復期</tspan><tspan x="270.0" dy="1.28em">回復期リハ病棟で</tspan><tspan x="270.0" dy="1.28em">集中的に</tspan><tspan x="270.0" dy="1.28em">ADL自立へ</tspan></text><path d="M351.0,62.0 L370.0,62.0" class="flk" marker-end="url(#g10-k)" marker-start="url(#g10-k)"/><rect x="374.0" y="10" width="156.0" height="104" rx="10" class="bx"/><text x="452.0" y="62.0" text-anchor="middle" class="m"><tspan x="452.0" dy="-1.28em">生活期</tspan><tspan x="452.0" dy="1.28em">期間が長い</tspan><tspan x="452.0" dy="1.28em">健康寿命の延伸</tspan></text></svg></div>
+      <figcaption><b>図5-2 急性期・回復期・生活期</b>。3つは重なり合い、一方向だけでなく行き来もある（シームレス）。</figcaption>
+    </figure>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>時期</th><th>主な場所</th><th>ポイント</th></tr></thead>
+      <tbody>
+        <tr><th>急性期</th><td>急性期病棟（<dfn data-def="Intensive Care Unit：集中治療室。">ICU</dfn>・<dfn data-def="Stroke Care Unit：脳卒中ケアユニット。">SCU</dfn>を含む）</td><td>原疾患の治療が最優先。並行してリハ治療を行い、不動による合併症や<b>せん妄</b>を防ぐ</td></tr>
+        <tr><th>回復期</th><td><b class="key">回復期リハビリテーション病棟</b>、一般病棟・地域包括ケア病棟</td><td>病状が安定した人に<b>集中的</b>に。食事・更衣・移動・排泄・入浴・コミュニケーションの<b class="key">ADL自立</b>が目標</td></tr>
+        <tr><th>生活期</th><td>自宅・各種施設、外来・通所・訪問</td><td>期間が長く<b class="key">健康寿命の延伸</b>に重要。医療保険から<b>介護保険</b>への橋渡し</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="step" data-step="4">
+    <h3>それぞれの時期で起こること</h3>
+    <div class="cards">
+      <div class="card"><h5>急性期：早く動くほど良い</h5><p>ICUでの早期離床・運動療法 → <b>せん妄</b>のリスク低下、人工呼吸器管理期間の短縮、退院時ADLの改善。SCUで早期から座位 → 意識レベル・歩行獲得の予後が改善。</p></div>
+      <div class="card"><h5>回復期：退院後を準備する</h5><p>家庭・学校・職場の情報を集め、自宅の改修や介護保険の申請も同時に進める。退院前の<b>多職種カンファレンス</b>で、退院後のケアプランを検討する。</p></div>
+      <div class="card"><h5>生活期：自分で続ける</h5><p>入院中は受け身になりやすいが、生活期では<b>自主的に行動</b>することが必要。「できる」という実感＝<b class="key">自己効力感</b>を育てる。</p></div>
+    </div>
+    <details class="more"><summary>回復期リハ病棟を通らない人もいる</summary>
+      <p>上肢の骨折や心筋梗塞後、がん治療後などは、急性期病院から直接自宅へ退院することも多い。その場合は退院前の患者指導や外来でのリハ治療を、主治医やリハビリテーション科医がマネジメントする。</p>
+    </details>
+  </div>
+
+  <div class="step" data-step="5">
+    <h3>つながり</h3>
+    <aside class="link">
+      <p>生活期のリハビリテーションには「地域リハビリテーション」の考え方が含まれ、介護保険のサービスとつながる。</p>
+      <a class="jump" href="#u07">テーマ7 地域リハと介護保険へ</a>
+      <a class="jump" href="#u01">テーマ1 健康寿命</a>
+    </aside>
+  </div>
+
+  <div class="step" data-step="6">
+    <h3>施術の場面で意識したいこと</h3>
+    <aside class="clinic">
+      <ul>
+        <li>治療院で出会う患者さんの多くは<b>生活期</b>にいる。本人が自主的に体を動かし続けられるよう、「できる」実感（自己効力感）を大切にした声かけを心がける。</li>
+        <li>どの時期の、どんなリハを受けているか（受けてきたか）を問診で確かめ、担当の医療職との情報共有に役立てる。</li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="step" data-step="7">
+    <h3>見ないで言ってみよう</h3>
+    <div class="rq"><p class="rq-q">リハビリテーションの5つの分野と、それぞれの主な連携先は？</p>
+      <div class="rq-a">医学的（医療職）・教育的（教育関係者）・職業的（ハローワーク・就労先）・社会的（地域住民・行政）・工学的（義肢装具士・業者）。</div></div>
+    <div class="rq"><p class="rq-q">ICUでの早期離床の効果を3つ。</p>
+      <div class="rq-a">せん妄の発症リスク低下、人工呼吸器管理期間の短縮、退院時ADLスコアの改善。</div></div>
+    <div class="rq"><p class="rq-q">回復期の主な目標と、生活期で大切にすることは？</p>
+      <div class="rq-a">回復期：ADLの自立。生活期：自主的な行動と自己効力感、健康寿命の延伸、介護保険への橋渡し。</div></div>
+  </div>
+
+  <div class="step" data-step="8">
+    <h3>ノートにまとめる</h3>
+    <div class="summary"><h5>要点</h5><ul>
+      <li>5分野：医学的・教育的・職業的・社会的・工学的</li>
+      <li>急性期：原疾患の治療最優先＋早期離床（せん妄・不動の合併症を防ぐ）</li>
+      <li>回復期：回復期リハ病棟で集中的に、ADL自立。退院前カンファレンス</li>
+      <li>生活期：長い、健康寿命、介護保険へ、自己効力感</li>
+      <li>3つの時期はシームレスで、行き来もある</li>
+    </ul></div>
+    <figure class="fig w-s"><div class="canvas"><svg class="dg" viewBox="0 0 460 213" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="まとめ：分野と時期"><title>まとめ：分野と時期</title><defs><marker id="g20-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g20-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g20-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g20-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="20" y="10" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="30.5" text-anchor="middle">5分野：医学的・教育的・職業的・社会的・工学的</text><rect x="20.0" y="85" width="130.66666666666666" height="41" rx="10" class="bx"/><text x="85.33333333333333" y="105.5" text-anchor="middle" class="m">急性期</text><rect x="164.66666666666666" y="85" width="130.66666666666666" height="41" rx="10" class="bx"/><text x="230.0" y="105.5" text-anchor="middle" class="m">回復期</text><rect x="309.3333333333333" y="85" width="130.66666666666666" height="41" rx="10" class="bx"/><text x="374.66666666666663" y="105.5" text-anchor="middle" class="m">生活期</text><path d="M230.0,53 C230.0,68.0 85.33333333333333,68.0 85.33333333333333,82" class="flk" marker-end="url(#g20-k)"/><path d="M230.0,53 L230.0,82" class="flk" marker-end="url(#g20-k)"/><path d="M230.0,53 C230.0,68.0 374.66666666666663,68.0 374.66666666666663,82" class="flk" marker-end="url(#g20-k)"/><rect x="20" y="160" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="180.5" text-anchor="middle">3つの時期はシームレスにつながり、行き来もする</text><path d="M85.33333333333333,128 C85.33333333333333,143.0 230.0,143.0 230.0,157" class="flk" marker-end="url(#g20-k)"/><path d="M230.0,128 L230.0,157" class="flk" marker-end="url(#g20-k)"/><path d="M374.66666666666663,128 C374.66666666666663,143.0 230.0,143.0 230.0,157" class="flk" marker-end="url(#g20-k)"/></svg></div><figcaption><b>書き写し用まとめ図</b></figcaption></figure>
+    <div class="note" data-prompt="脳卒中で倒れた人が、急性期 → 回復期 → 生活期と進むとき、それぞれの時期でどんな場所で何をするか、1行ずつ書いてみよう"></div>
+  </div>
+
+  <div class="step" data-step="9">
+    <h3>確認問題</h3>
+    <div class="q mc" data-ans="3"><p class="stem">ハローワークなどと連携し、就業のための評価・職業訓練・職場紹介を行うのはどれか。</p>
+      <ol class="opts"><li>医学的リハビリテーション</li><li>教育的リハビリテーション</li><li>職業的リハビリテーション</li><li>工学的リハビリテーション</li></ol>
+      <div class="exp">職業的リハビリテーション。障害者雇用促進法・障害者総合支援法にもとづく。</div></div>
+    <div class="q mc" data-ans="1"><p class="stem">ICUでの早期離床・運動療法の効果として正しいのはどれか。</p>
+      <ol class="opts"><li>せん妄の発症リスクが下がる</li><li>人工呼吸器管理期間が長くなる</li><li>退院時のADLが低下する</li><li>原疾患の治療が不要になる</li></ol>
+      <div class="exp">せん妄リスク低下・人工呼吸器管理期間の短縮・退院時ADLの改善。</div></div>
+    <div class="q fill"><p class="stem">生活期では、障害の有無にかかわらず「できる」という実感＝<span class="fb" data-a="自己効力感"></span>を持てるようにかかわる。</p>
+      <div class="exp">生活期は患者の自主的な行動が必要になる。</div></div>
+    <div class="q write"><p class="stem">「3つの時期はシームレス」とはどういう意味か説明しよう。</p>
+      <div class="exp"><b>模範解答例</b>：急性期・回復期・生活期はそれぞれ独立しておらず重なり合っている。途切れなくリハ医療を提供する必要があり、流れも一方向だけでなく行き来することがある。</div></div>
+  </div>
+</section>
+
+<!-- ===== 06_team.html ===== -->
+<section class="unit" id="u06" data-no="6" data-part="第3部 支えるしくみ" data-title="リハビリテーション医療チーム">
+  <header class="unit-head">
+    <p class="unit-part">第3部 支えるしくみ</p>
+    <h2><span class="no">6</span>リハビリテーション医療チーム</h2>
+  </header>
+
+  <div class="step" data-step="1">
+    <h3>多くの専門職が、1人の患者にチームでかかわる</h3>
+    <p class="lead"><b class="key">チーム医療</b>とは、多種多様な医療スタッフが高い専門性を前提に、<b class="key">目的と情報を共有</b>し、業務を分担しつつ互いに<b class="key">連携・補完</b>し合って、患者の状況に的確に対応した医療を提供すること（厚生労働省）。</p>
+  </div>
+
+  <div class="step" data-step="2">
+    <h3>チームのメンバー</h3>
+    <p>リハビリテーション科医・各科の医師・理学療法士（PT）・作業療法士（OT）・言語聴覚士（ST）・義肢装具士・歯科医・看護師・薬剤師・管理栄養士・公認心理師/臨床心理士・社会福祉士/医療ソーシャルワーカー・介護支援専門員（ケアマネジャー）・介護福祉士など。</p>
+    <div class="box"><p><b>あん摩マッサージ指圧師・はり師・きゅう師</b>は、現状では保険医療機関でのチームアプローチの機会は少ないが、今後は<b class="key">在宅医療</b>（通所介護施設の<b class="key">機能訓練指導員</b>など）でチーム医療の担い手として期待されている。</p></div>
+  </div>
+
+  <div class="step" data-step="3">
+    <h3>なぜチーム医療が必要か・何が良くなるか</h3>
+    <div class="cards">
+      <div class="card"><h5>背景</h5><p>超高齢社会、急性疾患から<b>慢性疾患（生活習慣病）</b>への疾病構造の変化、病院から<b>地域</b>へ（地域包括ケア）。病気だけでなく<b>生活を支える全人的アプローチ</b>が求められる。</p></div>
+      <div class="card"><h5>効果</h5><p>①早期発見・回復促進・重症化予防<br>②効率化による医療従事者の負担軽減<br>③標準化・組織化による<b>医療安全</b>の向上</p></div>
+      <div class="card"><h5>推進の基本</h5><p>①専門性の向上 ②役割の拡大 ③スタッフ間の連携・補完</p></div>
+    </div>
+  </div>
+
+  <div class="step" data-step="4">
+    <h3>チームアプローチの3つのモデル</h3>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="チームアプローチの3つのモデル"><title>チームアプローチの3つのモデル</title><defs><marker id="g11-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g11-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g11-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g11-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><circle cx="85" cy="110" r="22" class="num"/><text x="85" y="111" text-anchor="middle" class="w b s">指示</text><circle cx="30" cy="55" r="15" class="bxb"/><path d="M67.4,92.4 L46.5,71.5" class="flk" marker-end="url(#g11-k)"/><circle cx="140" cy="55" r="15" class="bxb"/><path d="M102.6,92.4 L123.5,71.5" class="flk" marker-end="url(#g11-k)"/><circle cx="30" cy="165" r="15" class="bxb"/><path d="M67.4,127.6 L46.5,148.5" class="flk" marker-end="url(#g11-k)"/><circle cx="140" cy="165" r="15" class="bxb"/><path d="M102.6,127.6 L123.5,148.5" class="flk" marker-end="url(#g11-k)"/><text x="85" y="205" text-anchor="middle" class="b m nm">マルチ</text><text x="85" y="226" text-anchor="middle" class="s tg">1人の指示で分担</text><path d="M260,52 L315,92" class="ln"/><path d="M260,52 L294,157" class="ln"/><path d="M260,52 L226,157" class="ln"/><path d="M260,52 L205,92" class="ln"/><path d="M315,92 L294,157" class="ln"/><path d="M315,92 L226,157" class="ln"/><path d="M315,92 L205,92" class="ln"/><path d="M294,157 L226,157" class="ln"/><path d="M294,157 L205,92" class="ln"/><path d="M226,157 L205,92" class="ln"/><circle cx="260" cy="52" r="15" class="bxb"/><circle cx="315" cy="92" r="15" class="bxb"/><circle cx="294" cy="157" r="15" class="bxb"/><circle cx="226" cy="157" r="15" class="bxb"/><circle cx="205" cy="92" r="15" class="bxb"/><text x="260" y="205" text-anchor="middle" class="b m nm">インター</text><text x="260" y="226" text-anchor="middle" class="s tg">協議して決め、協働</text><circle cx="415" cy="96" r="40" class="lnd"/><circle cx="455" cy="96" r="40" class="lnd"/><circle cx="435" cy="130" r="40" class="lnd"/><circle cx="435" cy="110" r="13" class="numo"/><text x="435" y="205" text-anchor="middle" class="b m nm">トランス</text><text x="435" y="226" text-anchor="middle" class="s tg">専門を超えて役割を共有</text></svg></div>
+      <figcaption><b>図6-1 3つのモデルのイメージ</b>。課題の緊急度と、役割の分け方が違う。</figcaption>
+    </figure>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>モデル</th><th>やり方</th><th>例</th></tr></thead>
+      <tbody>
+        <tr><th>マルチディシプリナリー</th><td><b>緊急で命にかかわる</b>課題に、しばしば<b class="key">一人の指示</b>で、各自が専門の役割を果たす</td><td><b>救急外来</b>・災害現場</td></tr>
+        <tr><th>インターディシプリナリー</th><td>複合的だが緊急でない課題に、各職種が<b class="key">意思決定に参加</b>し協働・連携する</td><td><b>カンファレンス</b>・栄養サポートチーム・褥瘡対策チーム</td></tr>
+        <tr><th>トランスディシプリナリー</th><td>専門分野を超えて役割を横断的に共有する<b class="key">役割開放（role release）</b></td><td><b>地域リハ</b>・食事介助を看護師だけでなくPTも行う（法律の業務範囲内で）</td></tr>
+      </tbody>
+    </table></div>
+    <details class="more"><summary>院内のチームの例と看護師の役割</summary>
+      <p>栄養サポート・感染制御・緩和ケア・口腔ケア・呼吸サポート・摂食嚥下・褥瘡対策・周術期管理チームなど。これらは診療報酬で評価されている。</p>
+      <p><b>看護師はすべてのチームに入っている</b>。看護師の介入は、患者の「できるADL」を「しているADL」へ高め、生活を確立させる重要な役割をもつ。</p>
+    </details>
+    <details class="adv"><summary>チーム医療の課題：IPE</summary>
+      <p>専門職ごとに卒前教育が異なり、他職種の理解や連携の方法を共通に学ぶ機会が少ない。そこで、複数の領域の専門職がともに学び合う<b>IPE（専門職連携教育）</b>が広がっている。相乗効果（シナジー効果）が期待され、卒後・生涯教育への体系化が課題。</p>
+    </details>
+  </div>
+
+  <div class="step" data-step="5">
+    <h3>つながり</h3>
+    <aside class="link">
+      <p>トランスディシプリナリー・モデルの例は「地域リハ」。テーマ7で、地域で支える仕組みを学ぶ。</p>
+      <a class="jump" href="#u07">テーマ7 地域リハへ</a>
+      <a class="jump" href="#u05">テーマ5 退院前の多職種カンファレンス</a>
+    </aside>
+  </div>
+
+  <div class="step" data-step="6">
+    <h3>鍼灸師としてチームに加わるために</h3>
+    <aside class="clinic">
+      <ul>
+        <li>教科書は、専門職に求められる能力として「患者の状況を評価し<b>見通しを立てる</b>」「全人的にとらえ<b>人権を尊重</b>する」「関係者と<b>適切にコミュニケーション</b>をとる」を挙げている。</li>
+        <li>チームでは、患者・家族の目標を共有し、自分の専門性を発揮しつつ、チームの一員として支える視点を持つ。</li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="step" data-step="7">
+    <h3>見ないで言ってみよう</h3>
+    <div class="rq"><p class="rq-q">チーム医療の効果を3つ。</p>
+      <div class="rq-a">①早期発見・回復促進・重症化予防 ②医療従事者の負担軽減 ③医療安全の向上。</div></div>
+    <div class="rq"><p class="rq-q">3つのチームモデルの名前と、それぞれの例は？</p>
+      <div class="rq-a">マルチ＝救急外来・災害現場。インター＝カンファレンス・栄養サポートチーム。トランス＝地域リハ・PTによる食事介助。</div></div>
+    <div class="rq"><p class="rq-q">鍼灸師がチーム医療の担い手として期待されている場は？</p>
+      <div class="rq-a">在宅医療（通所介護施設の機能訓練指導員など）。</div></div>
+  </div>
+
+  <div class="step" data-step="8">
+    <h3>ノートにまとめる</h3>
+    <div class="summary"><h5>要点</h5><ul>
+      <li>チーム医療＝高い専門性＋目的と情報の共有＋分担・連携・補完</li>
+      <li>効果：早期発見・重症化予防／負担軽減／医療安全</li>
+      <li>マルチ（緊急・一人の指示）／インター（協議・協働）／トランス（役割開放）</li>
+      <li>看護師はすべての院内チームに入る</li>
+      <li>鍼灸師は在宅医療（機能訓練指導員など）で期待</li>
+    </ul></div>
+    <figure class="fig w-s"><div class="canvas"><svg class="dg" viewBox="0 0 460 161" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="まとめ：チーム医療"><title>まとめ：チーム医療</title><defs><marker id="g21-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g21-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g21-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g21-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="20" y="10" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="30.5" text-anchor="middle">チーム医療＝専門性＋目的と情報の共有＋連携・補完</text><rect x="20.0" y="85" width="130.66666666666666" height="64" rx="10" class="bx"/><text x="85.33333333333333" y="117.0" text-anchor="middle" class="m">マルチ：救急</text><rect x="164.66666666666666" y="85" width="130.66666666666666" height="64" rx="10" class="bx"/><text x="230.0" y="117.0" text-anchor="middle" class="m"><tspan x="230.0" dy="-0.64em">インター：</tspan><tspan x="230.0" dy="1.28em">カンファレンス</tspan></text><rect x="309.3333333333333" y="85" width="130.66666666666666" height="64" rx="10" class="bx"/><text x="374.66666666666663" y="117.0" text-anchor="middle" class="m"><tspan x="374.66666666666663" dy="-0.64em">トランス：</tspan><tspan x="374.66666666666663" dy="1.28em">地域リハ</tspan></text><path d="M230.0,53 C230.0,68.0 85.33333333333333,68.0 85.33333333333333,82" class="flk" marker-end="url(#g21-k)"/><path d="M230.0,53 L230.0,82" class="flk" marker-end="url(#g21-k)"/><path d="M230.0,53 C230.0,68.0 374.66666666666663,68.0 374.66666666666663,82" class="flk" marker-end="url(#g21-k)"/></svg></div><figcaption><b>書き写し用まとめ図</b></figcaption></figure>
+    <div class="note" data-prompt="3つのモデルの違いを「課題の緊急度」と「役割の分け方」という2つの言葉を使って説明しよう"></div>
+  </div>
+
+  <div class="step" data-step="9">
+    <h3>確認問題</h3>
+    <div class="q mc" data-ans="1"><p class="stem">救急外来で、一人の指示のもと各職種が専門の役割を果たすチームモデルはどれか。</p>
+      <ol class="opts"><li>マルチディシプリナリー・モデル</li><li>インターディシプリナリー・モデル</li><li>トランスディシプリナリー・モデル</li><li>役割開放モデル</li></ol>
+      <div class="exp">緊急で命にかかわる課題にはマルチディシプリナリー・モデル。</div></div>
+    <div class="q mc" data-ans="3"><p class="stem">「役割開放（role release）」を行うチームモデルの例として適切なのはどれか。</p>
+      <ol class="opts"><li>災害現場の医療活動</li><li>褥瘡対策チームのカンファレンス</li><li>地域リハビリテーション</li><li>救急外来</li></ol>
+      <div class="exp">トランスディシプリナリー・モデルの例は地域リハや、PTも食事介助を行うことなど。</div></div>
+    <div class="q fill"><p class="stem">複数の領域の専門職がともに学び合う教育を<span class="fb" data-a="IPE|専門職連携教育"></span>という。</p>
+      <div class="exp">interprofessional education。相乗効果（シナジー効果）が期待される。</div></div>
+    <div class="q write"><p class="stem">チーム医療が必要とされるようになった背景を2つ挙げよう。</p>
+      <div class="exp"><b>模範解答例</b>：超高齢社会と慢性疾患（生活習慣病）の増加で、病気だけでなく生活を支える全人的アプローチが必要になった。医療の場が病院から地域へ広がり、地域包括ケアシステムが進められている。</div></div>
+  </div>
+</section>
+
+<!-- ===== 07_community.html ===== -->
+<section class="unit" id="u07" data-no="7" data-part="第3部 支えるしくみ" data-title="地域リハビリテーションと介護保険">
+  <header class="unit-head">
+    <p class="unit-part">第3部 支えるしくみ</p>
+    <h2><span class="no">7</span>地域リハビリテーションと介護保険</h2>
+  </header>
+
+  <div class="step" data-step="1">
+    <h3>住み慣れたところで、その人らしく</h3>
+    <p class="lead"><b class="key">地域リハビリテーション</b>とは、障害のある子どもや成人・高齢者とその家族が、住み慣れたところで一生安全に、その人らしくいきいきと暮らせるよう、地域住民を含む<b>あらゆる人や機関</b>が協力して行う活動のすべて（2016年度改定の定義）。</p>
+    <div class="cards">
+      <div class="card"><h5>WHO</h5><p><b class="key">1974年</b>、大都市の施設中心のリハの限界に気づき、地域リハ（<b>CBR</b>：Community Based Rehabilitation）を提唱（1976年の総会で採択）</p></div>
+      <div class="card"><h5>日本</h5><p>昔は急性期の後に地方（温泉地など）でリハ → 1970年代に大都市の施設中心へ → <b class="key">2000年の介護保険</b>開始で地域リハが根づく</p></div>
+    </div>
+  </div>
+
+  <div class="step" data-step="2">
+    <h3>地域リハで変わる「中心」</h3>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="地域リハビリテーションで変わる中心"><title>地域リハビリテーションで変わる中心</title><defs><marker id="g12-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g12-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g12-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g12-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><text x="120" y="16" text-anchor="middle" class="s tg b">これまで</text><text x="400" y="16" text-anchor="middle" class="s to b">これから</text><rect x="20" y="32" width="200" height="40" rx="10" class="bxg"/><text x="120.0" y="52.0" text-anchor="middle" class="m">医療</text><path d="M228,52 L292,52" class="flo" marker-end="url(#g12-o)"/><rect x="300" y="32" width="200" height="40" rx="10" class="bxk"/><text x="400.0" y="52.0" text-anchor="middle" class="b m nm">福祉・保健</text><rect x="20" y="84" width="200" height="40" rx="10" class="bxg"/><text x="120.0" y="104.0" text-anchor="middle" class="m">病院・施設</text><path d="M228,104 L292,104" class="flo" marker-end="url(#g12-o)"/><rect x="300" y="84" width="200" height="40" rx="10" class="bxk"/><text x="400.0" y="104.0" text-anchor="middle" class="b m nm">在宅</text><rect x="20" y="136" width="200" height="40" rx="10" class="bxg"/><text x="120.0" y="156.0" text-anchor="middle" class="m">治療</text><path d="M228,156 L292,156" class="flo" marker-end="url(#g12-o)"/><rect x="300" y="136" width="200" height="40" rx="10" class="bxk"/><text x="400.0" y="156.0" text-anchor="middle" class="b m nm">予防</text><rect x="20" y="188" width="200" height="40" rx="10" class="bxg"/><text x="120.0" y="208.0" text-anchor="middle" class="m">個人・個のセラピスト</text><path d="M228,208 L292,208" class="flo" marker-end="url(#g12-o)"/><rect x="300" y="188" width="200" height="40" rx="10" class="bxk"/><text x="400.0" y="208.0" text-anchor="middle" class="b m nm">地域全体・多職種連携</text></svg></div>
+      <figcaption><b>図7-1 地域リハビリテーション活動の考え方</b></figcaption>
+    </figure>
+  </div>
+
+  <div class="step" data-step="3">
+    <h3>介護保険制度（2000年〜）</h3>
+    <p class="lead">介護が必要になった高齢者とその家族を<b class="key">社会全体で支え合う</b>しくみ。介護保険法にもとづき、<b>市町村（特別区）</b>が保険給付を行う。</p>
+    <div class="cols cards">
+      <div class="card"><h5>第1号被保険者</h5><p class="big"><b class="key">65歳以上</b></p><p>原因を問わず、要介護認定を受ければ利用できる</p></div>
+      <div class="card"><h5>第2号被保険者</h5><p class="big"><b class="key">40〜64歳</b></p><p>老化に起因する<b class="key">16の特定疾病</b>で認定を受けた場合に利用できる</p></div>
+    </div>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 500 276" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="介護保険サービスを使うまでの流れ"><title>介護保険サービスを使うまでの流れ</title><defs><marker id="g13-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g13-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g13-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g13-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="52" y="10" width="438" height="39" rx="10" class="bx"/><text x="271.0" y="29.5" text-anchor="middle"></text><text x="66" y="29.5" text-anchor="start" class="m">要介護認定の申請（本人・家族 → 市町村）</text><circle cx="28" cy="29.5" r="13" class="num"/><text x="28" y="30.5" text-anchor="middle" class="w b m">1</text><path d="M28,44.5 L28,55" class="flk" marker-end="url(#g13-k)"/><rect x="52" y="59" width="438" height="39" rx="10" class="bx"/><text x="271.0" y="78.5" text-anchor="middle"></text><text x="66" y="78.5" text-anchor="start" class="m">主治医意見書 ＋ 訪問調査</text><circle cx="28" cy="78.5" r="13" class="num"/><text x="28" y="79.5" text-anchor="middle" class="w b m">2</text><path d="M28,93.5 L28,104" class="flk" marker-end="url(#g13-k)"/><rect x="52" y="108" width="438" height="39" rx="10" class="bxk"/><text x="271.0" y="127.5" text-anchor="middle"></text><text x="66" y="127.5" text-anchor="start" class="m">介護認定審査会で決定（申請から原則30日以内）</text><circle cx="28" cy="127.5" r="13" class="numo"/><text x="28" y="128.5" text-anchor="middle" class="w b m">3</text><path d="M28,142.5 L28,153" class="flk" marker-end="url(#g13-k)"/><rect x="52" y="157" width="438" height="39" rx="10" class="bx"/><text x="271.0" y="176.5" text-anchor="middle"></text><text x="66" y="176.5" text-anchor="start" class="m">非該当／要支援1・2／要介護1〜5</text><circle cx="28" cy="176.5" r="13" class="num"/><text x="28" y="177.5" text-anchor="middle" class="w b m">4</text><path d="M28,191.5 L28,202" class="flk" marker-end="url(#g13-k)"/><rect x="52" y="206" width="438" height="60" rx="10" class="bx"/><text x="271.0" y="236.0" text-anchor="middle"></text><text x="66" y="236.0" text-anchor="start" class="m"><tspan x="66" dy="-0.64em">ケアプラン（ケアマネジャー or</tspan><tspan x="66" dy="1.28em">セルフプラン）→ サービス利用</tspan></text><circle cx="28" cy="236.0" r="13" class="num"/><text x="28" y="237.0" text-anchor="middle" class="w b m">5</text></svg></div>
+      <figcaption><b>図7-2 サービスを利用するまでの流れ</b>。申請から決定・通知までは<b>原則30日以内</b>。</figcaption>
+    </figure>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>主なサービス</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><th>訪問系</th><td>訪問介護（ホームヘルプ）・訪問リハ・訪問入浴・訪問看護・居宅療養管理指導</td></tr>
+        <tr><th>通所系</th><td><b>通所介護（デイサービス）</b>：食事・入浴など生活の支援／<b>通所リハ（デイケア）</b>：老健や医療機関でのリハ</td></tr>
+        <tr><th>福祉用具・住宅</th><td>福祉用具貸与（車いす・特殊寝台・手すりなど）／福祉用具購入 <b class="key">年間10万円</b>まで／住宅改修（手すり・段差解消）<b class="key">20万円</b>まで</td></tr>
+        <tr><th>ショートステイ</th><td>短期間の入所で生活支援・機能訓練。連続30日まで。家族の<dfn data-def="介護する家族が一時的に介護から離れて休息できるようにすること。">レスパイト</dfn>にも</td></tr>
+        <tr><th>施設</th><td>介護老人福祉施設（特別養護老人ホーム）は原則<b class="key">要介護3〜5</b>／介護老人保健施設・介護医療院などは要介護1〜5</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="step" data-step="4">
+    <h3>地域包括ケアシステム</h3>
+    <p class="lead">団塊の世代が75歳以上になる<b class="key">2025年</b>を目途に、重い要介護状態になっても住み慣れた地域で自分らしく暮らせるよう、<b>住まい・医療・介護・予防・生活支援</b>を一体的に提供するしくみ。</p>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="地域包括ケアシステムの5つの要素"><title>地域包括ケアシステムの5つの要素</title><defs><marker id="g15-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g15-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g15-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g15-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="160" y="158" width="180" height="64" rx="10" class="bxd"/><text x="250.0" y="190.0" text-anchor="middle" class="w b"><tspan x="250.0" dy="-0.64em">地域包括</tspan><tspan x="250.0" dy="1.28em">支援センター</tspan></text><path d="M190,156 L160,102" class="flk" marker-end="url(#g15-k)"/><rect x="10" y="22" width="220" height="80" rx="10" class="bx"/><text x="120.0" y="62.0" text-anchor="middle" class="m"><tspan x="120.0" dy="-0.64em">住まい</tspan><tspan x="120.0" dy="1.28em"><tspan class="to b">自宅・サービス付き住宅</tspan></tspan></text><path d="M310,156 L340,102" class="flk" marker-end="url(#g15-k)"/><rect x="270" y="22" width="220" height="80" rx="10" class="bx"/><text x="380.0" y="62.0" text-anchor="middle" class="m"><tspan x="380.0" dy="-0.64em">医療</tspan><tspan x="380.0" dy="1.28em"><tspan class="to b">かかりつけ医・病院</tspan></tspan></text><path d="M190,224 L160,278" class="flk" marker-end="url(#g15-k)"/><rect x="10" y="278" width="220" height="80" rx="10" class="bx"/><text x="120.0" y="318.0" text-anchor="middle" class="m"><tspan x="120.0" dy="-0.64em">介護</tspan><tspan x="120.0" dy="1.28em"><tspan class="to b">在宅・施設サービス</tspan></tspan></text><path d="M310,224 L340,278" class="flk" marker-end="url(#g15-k)"/><rect x="270" y="278" width="220" height="80" rx="10" class="bx"/><text x="380.0" y="318.0" text-anchor="middle" class="m"><tspan x="380.0" dy="-0.64em">予防・生活支援</tspan><tspan x="380.0" dy="1.28em"><tspan class="to b">老人クラブ・自治会・NPO</tspan></tspan></text></svg></div>
+      <figcaption><b>図7-3 地域包括ケアシステム</b>。<b>おおむね30分以内</b>に必要なサービスが届く日常生活圏域（<b>中学校区</b>）が単位。</figcaption>
+    </figure>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 500 214" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="自助・互助・共助・公助"><title>自助・互助・共助・公助</title><defs><marker id="g14-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g14-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g14-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g14-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="10.0" y="10" width="235.0" height="92" rx="10" class="bx"/><rect x="10.0" y="10" width="235.0" height="34" rx="10" class="bxd"/><text x="127.5" y="28.0" text-anchor="middle" class="w b m nm">自助</text><text x="22.0" y="73.0" text-anchor="start" class="m"><tspan x="22.0" dy="-0.64em">自分のこと</tspan><tspan x="22.0" dy="1.28em">自主的な運動・健康管理</tspan></text><rect x="255.0" y="10" width="235.0" height="92" rx="10" class="bx"/><rect x="255.0" y="10" width="235.0" height="34" rx="10" class="bxd"/><text x="372.5" y="28.0" text-anchor="middle" class="w b m nm">互助</text><text x="267.0" y="73.0" text-anchor="start" class="m"><tspan x="267.0" dy="-0.64em">家族・友人・ボランティア</tspan><tspan x="267.0" dy="1.28em">の助け合い</tspan></text><rect x="10.0" y="112" width="235.0" height="92" rx="10" class="bx"/><rect x="10.0" y="112" width="235.0" height="34" rx="10" class="bxk"/><text x="127.5" y="130.0" text-anchor="middle" class="b m nm">共助</text><text x="22.0" y="175.0" text-anchor="start" class="m"><tspan x="22.0" dy="-0.64em">医療保険・介護保険</tspan><tspan x="22.0" dy="1.28em">（リスクを共有）</tspan></text><rect x="255.0" y="112" width="235.0" height="92" rx="10" class="bx"/><rect x="255.0" y="112" width="235.0" height="34" rx="10" class="bxd"/><text x="372.5" y="130.0" text-anchor="middle" class="w b m nm">公助</text><text x="267.0" y="175.0" text-anchor="start" class="m"><tspan x="267.0" dy="-0.64em">生活保護など</tspan><tspan x="267.0" dy="1.28em">税による福祉</tspan></text></svg></div>
+      <figcaption><b>図7-4 自助・互助・共助・公助</b>。財源に限りがあるため、自助・互助の役割が大きくなる。</figcaption>
+    </figure>
+    <details class="more"><summary>地域包括ケアシステムは誰がつくる？</summary>
+      <p>保険者である市区町村や都道府県が、地域の自主性や特性に応じてつくり上げる。行政だけでなく、NPO・ボランティア・民間企業など多様な担い手による重層的な支援体制が必要とされる。</p>
+    </details>
+  </div>
+
+  <div class="step" data-step="5">
+    <h3>つながり</h3>
+    <aside class="link">
+      <p>生活期のリハは介護保険のサービスと重なる。地域リハはトランスディシプリナリー・モデルの代表例。</p>
+      <a class="jump" href="#u05">テーマ5 生活期</a>
+      <a class="jump" href="#u06">テーマ6 チームモデル</a>
+    </aside>
+  </div>
+
+  <div class="step" data-step="6">
+    <h3>施術の場面で意識したいこと</h3>
+    <aside class="clinic">
+      <ul>
+        <li>通所介護（デイサービス）などでは、はり師・きゅう師・あん摩マッサージ指圧師が<b>機能訓練指導員</b>として働くことができ、地域の支え手として期待されている。</li>
+        <li>患者さんや家族から介護の相談を受けたら、市区町村の<b>地域包括支援センター</b>が相談窓口になることを伝えられるようにしておく。</li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="step" data-step="7">
+    <h3>見ないで言ってみよう</h3>
+    <div class="rq"><p class="rq-q">介護保険の第1号・第2号被保険者の年齢と、第2号がサービスを使える条件は？</p>
+      <div class="rq-a">第1号＝65歳以上、第2号＝40〜64歳。第2号は16の特定疾病で要介護認定を受けた場合。</div></div>
+    <div class="rq"><p class="rq-q">住宅改修と福祉用具購入の上限額は？ ショートステイの連続利用の上限は？</p>
+      <div class="rq-a">住宅改修20万円、福祉用具購入は年間10万円。ショートステイは連続30日まで。</div></div>
+    <div class="rq"><p class="rq-q">医療保険・介護保険、生活保護、ボランティアは、自助・互助・共助・公助のどれ？</p>
+      <div class="rq-a">医療保険・介護保険＝共助、生活保護＝公助、ボランティア＝互助。</div></div>
+  </div>
+
+  <div class="step" data-step="8">
+    <h3>ノートにまとめる</h3>
+    <div class="summary"><h5>要点</h5><ul>
+      <li>地域リハ：1974年WHOがCBRを提唱。医療→福祉・保健、施設→在宅、治療→予防、個人→地域</li>
+      <li>介護保険：2000年、市町村が保険者。第1号65歳以上／第2号40〜64歳（16特定疾病）</li>
+      <li>認定は原則30日以内。住宅改修20万円・福祉用具購入年10万円・特養は原則要介護3〜5</li>
+      <li>地域包括ケア：2025年目途、30分以内（中学校区）、地域包括支援センターが核</li>
+      <li>自助・互助・共助（保険）・公助（生活保護）</li>
+    </ul></div>
+    <figure class="fig w-s"><div class="canvas"><svg class="dg" viewBox="0 0 460 334" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="まとめ：地域で支える"><title>まとめ：地域で支える</title><defs><marker id="g22-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g22-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g22-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g22-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="20" y="10" width="420" height="41" rx="10" class="bx"/><text x="230.0" y="30.5" text-anchor="middle">地域リハ（1974年 WHO：CBR）</text><rect x="20" y="85" width="420" height="64" rx="10" class="bx"/><text x="230.0" y="117.0" text-anchor="middle"><tspan x="230.0" dy="-0.64em">介護保険（2000年）：第1号65歳以</tspan><tspan x="230.0" dy="1.28em">上／第2号40〜64歳（16特定疾病）</tspan></text><path d="M230.0,53 L230.0,82" class="flk" marker-end="url(#g22-k)"/><rect x="20" y="183" width="420" height="64" rx="10" class="bx"/><text x="230.0" y="215.0" text-anchor="middle"><tspan x="230.0" dy="-0.64em">地域包括ケア：2025年目途・</tspan><tspan x="230.0" dy="1.28em">30分以内（中学校区）</tspan></text><path d="M230.0,151 L230.0,180" class="flk" marker-end="url(#g22-k)"/><rect x="20.0" y="281" width="94.5" height="41" rx="10" class="bx"/><text x="67.25" y="301.5" text-anchor="middle" class="m">自助</text><rect x="128.5" y="281" width="94.5" height="41" rx="10" class="bx"/><text x="175.75" y="301.5" text-anchor="middle" class="m">互助</text><rect x="237.0" y="281" width="94.5" height="41" rx="10" class="bx"/><text x="284.25" y="301.5" text-anchor="middle" class="m">共助</text><rect x="345.5" y="281" width="94.5" height="41" rx="10" class="bx"/><text x="392.75" y="301.5" text-anchor="middle" class="m">公助</text><path d="M230.0,249 C230.0,264.0 67.25,264.0 67.25,278" class="flk" marker-end="url(#g22-k)"/><path d="M230.0,249 C230.0,264.0 175.75,264.0 175.75,278" class="flk" marker-end="url(#g22-k)"/><path d="M230.0,249 C230.0,264.0 284.25,264.0 284.25,278" class="flk" marker-end="url(#g22-k)"/><path d="M230.0,249 C230.0,264.0 392.75,264.0 392.75,278" class="flk" marker-end="url(#g22-k)"/></svg></div><figcaption><b>書き写し用まとめ図</b></figcaption></figure>
+    <div class="note" data-prompt="一人暮らしの高齢者が脳卒中後に自宅へ帰るとき、自助・互助・共助・公助それぞれでどんな支えがありうるか書き出そう"></div>
+  </div>
+
+  <div class="step" data-step="9">
+    <h3>確認問題</h3>
+    <div class="q mc" data-ans="2"><p class="stem">介護保険制度について正しいのはどれか。</p>
+      <ol class="opts"><li>保険者は都道府県である</li><li>第2号被保険者は40〜64歳である</li><li>申請から決定までは原則60日以内である</li><li>特別養護老人ホームは要支援者も対象である</li></ol>
+      <div class="exp">保険者は市町村（特別区）。決定・通知は原則30日以内。特養は原則要介護3〜5。</div></div>
+    <div class="q mc" data-ans="4"><p class="stem">自助・互助・共助・公助のうち「共助」にあたるのはどれか。</p>
+      <ol class="opts"><li>自主的な運動</li><li>ボランティア活動</li><li>生活保護</li><li>介護保険</li></ol>
+      <div class="exp">共助は制度化された相互扶助（医療保険・介護保険）。生活保護は公助。</div></div>
+    <div class="q fill"><p class="stem">地域包括ケアシステムは、おおむね<span class="fb" data-a="30|30分"></span>分以内に必要なサービスが届く日常生活圏域（<span class="fb" data-a="中学校区"></span>）を単位とする。</p>
+      <div class="exp">市区町村が設置する地域包括支援センターが核となる。</div></div>
+    <div class="q write"><p class="stem">WHOが地域リハビリテーション（CBR）を提唱した理由を説明しよう。</p>
+      <div class="exp"><b>模範解答例</b>：大都市の施設中心のリハビリテーションサービスには限界があることに気づき（1974年）、地域を基盤としたリハへ方向を転換したため。</div></div>
+  </div>
+</section>
+
+<!-- ===== 08_review.html ===== -->
+<section class="unit" id="u08" data-no="8" data-part="まとめ" data-title="総まとめ（理念から地域まで）">
+  <header class="unit-head">
+    <p class="unit-part">まとめ</p>
+    <h2><span class="no">8</span>総まとめ（理念から地域まで）</h2>
+  </header>
+
+  <div class="step" data-step="1">
+    <h3>1本の線でつなぐ</h3>
+    <p class="lead">「再び適した状態にする」という理念を、ICFで人をとらえ、時期と分野をまたいでチームで支え、最後は地域で支える。この流れで全体を思い出そう。</p>
+    <figure class="fig w-m">
+      <div class="canvas"><svg class="dg" viewBox="0 0 500 409" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="総まとめ：リハビリテーション医療の全体地図"><title>総まとめ：リハビリテーション医療の全体地図</title><defs><marker id="g23-k" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="g23-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c8463d"/></marker><marker id="g23-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a6db5"/></marker><marker id="g23-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d9650a"/></marker></defs><rect x="20" y="10" width="460" height="64" rx="10" class="bx"/><text x="250.0" y="42.0" text-anchor="middle"><tspan x="250.0" dy="-0.64em">理念：再び適した状態にする（機能</tspan><tspan x="250.0" dy="1.28em">の回復・障害の克服・活動を育む）</tspan></text><rect x="20" y="108" width="460" height="64" rx="10" class="bx"/><text x="250.0" y="140.0" text-anchor="middle"><tspan x="250.0" dy="-0.64em">障害のとらえ方：ICIDH（一方向）</tspan><tspan x="250.0" dy="1.28em">→ ICF（相互作用・環境も見る）</tspan></text><path d="M250.0,76 L250.0,105" class="flk" marker-end="url(#g23-k)"/><rect x="20.0" y="206" width="223.0" height="41" rx="10" class="bx"/><text x="131.5" y="226.5" text-anchor="middle">5つの分野</text><rect x="257.0" y="206" width="223.0" height="41" rx="10" class="bx"/><text x="368.5" y="226.5" text-anchor="middle">3つの時期</text><path d="M250.0,174 C250.0,189.0 131.5,189.0 131.5,203" class="flk" marker-end="url(#g23-k)"/><path d="M250.0,174 C250.0,189.0 368.5,189.0 368.5,203" class="flk" marker-end="url(#g23-k)"/><rect x="20" y="281" width="460" height="41" rx="10" class="bx"/><text x="250.0" y="301.5" text-anchor="middle">チーム医療：マルチ・インター・トランス</text><path d="M131.5,249 C131.5,264.0 250.0,264.0 250.0,278" class="flk" marker-end="url(#g23-k)"/><path d="M368.5,249 C368.5,264.0 250.0,264.0 250.0,278" class="flk" marker-end="url(#g23-k)"/><rect x="20" y="356" width="460" height="41" rx="10" class="bx"/><text x="250.0" y="376.5" text-anchor="middle">地域で支える：地域リハ・介護保険・地域包括ケア</text><path d="M250.0,324 L250.0,353" class="flk" marker-end="url(#g23-k)"/></svg></div>
+      <figcaption><b>図8-1 リハビリテーション医療の全体地図</b>（書き写し用）</figcaption>
+    </figure>
+  </div>
+
+  <div class="step" data-step="7">
+    <h3>テーマをまたいで思い出す</h3>
+    <div class="rq"><p class="rq-q">「活動を育む」の「活動」と、ICFの「活動」。ICFでは活動をどう2つに分ける？</p>
+      <div class="rq-a">「できる活動」と「している活動」。看護師の介入は「できるADL」を「しているADL」に高める役割をもつ。</div></div>
+    <div class="rq"><p class="rq-q">バリアフリー化された建物は、ICFのどの要素の、どちらの因子にあたる？</p>
+      <div class="rq-a">環境因子の促進因子。</div></div>
+    <div class="rq"><p class="rq-q">生活期のリハと、地域リハ、トランスディシプリナリー・モデル。この3つはどうつながる？</p>
+      <div class="rq-a">生活期のリハには地域リハの考え方が含まれ、地域リハは専門を超えて役割を共有するトランスディシプリナリー・モデルの例。</div></div>
+    <div class="rq"><p class="rq-q">要介護4・5で、介護が必要になった原因の1位は？ それはリハのどの課題とつながる？</p>
+      <div class="rq-a">脳血管疾患（脳卒中）。循環器病対策基本法など、循環器病のリハが新たな課題とされている。</div></div>
+  </div>
+
+  <div class="step" data-step="8">
+    <h3>自分の言葉でまとめ直す</h3>
+    <div class="note" data-id="u08-map" data-prompt="図8-1を見ずに全体地図を紙に描こう。描けなかったところをここに書き出す"></div>
+    <div class="note" data-id="u08-after" data-prompt="テーマ0で書いた「リハビリ」のイメージと比べて、いまの自分ならどう説明するか書いてみよう"></div>
+    <aside class="link"><p>右上の「学習記録」から、ノート・マーカーをまとめてコピー、またはテキストファイルで保存できます。苦手リストに残っている問題から復習しよう。</p></aside>
+  </div>
+</section>
+
+</main>
+
+<!-- 表示と印刷メニュー -->
+<div class="menu" id="menu">
+  <h4>思い出す練習</h4>
+  <button class="mi" id="miHideKeys" type="button">重要語句をすべて隠す<span class="sw"></span></button>
+  <button class="mi" id="miHideFig" type="button">図の名称をすべて隠す<span class="sw"></span></button>
+  <h4>文字の大きさ</h4>
+  <div class="seg" id="fsSeg"><button type="button" data-fs="s">小</button><button type="button" data-fs="m">標準</button><button type="button" data-fs="l">大</button></div>
+  <h4>印刷・PDF保存（Goodnotes用）</h4>
+  <button class="mi" id="miPrint" type="button">印刷する（解答なし）</button>
+  <button class="mi" id="miPrintAns" type="button">印刷する（解答・解説つき）</button>
+</div>
+
+<!-- 検索 -->
+<div class="overlay" id="overlay"></div>
+<div class="sheet search-s" id="search" role="dialog" aria-label="教材内検索">
+  <div class="sh-head"><input id="sinput" type="search" placeholder="キーワード（例：うっ血、僧帽弁）" autocomplete="off"><button class="ibtn sh-close" type="button" aria-label="閉じる"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="sh-body"><p class="small" id="sinfo"></p><ul class="sres" id="sres"></ul></div>
+</div>
+
+<!-- 学習記録 -->
+<div class="sheet panel-r rec" id="rec" role="dialog" aria-label="学習記録">
+  <div class="sh-head"><h3>学習記録</h3><button class="ibtn sh-close" type="button" aria-label="閉じる"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="sh-body">
+    <div class="stat" id="recStat"></div>
+    <h4>部ごとの進み具合</h4><div id="recParts"></div>
+    <h4>ブックマーク</h4><ul id="recBm"></ul>
+    <h4>苦手（間違えた問題・登録したテーマ）</h4><ul id="recWeak"></ul>
+    <h4>マイノート <span class="small" id="recNoteInfo"></span></h4>
+    <div class="btns"><button class="chip" id="recCopyNotes" type="button">すべてコピー</button><button class="chip" id="recExportNotes" type="button">テキスト(.txt)で保存</button></div>
+    <h4>バックアップ</h4>
+    <p class="small">記録はこの端末のこのブラウザだけに保存されます。機種変更や履歴の削除の前に保存しておきましょう。</p>
+    <div class="btns"><button class="chip" id="recBackup" type="button">バックアップを保存</button><button class="chip" id="recRestore" type="button">バックアップから復元</button><button class="chip" id="recReset" type="button">記録をすべて消去</button></div>
+    <input type="file" id="restoreFile" accept=".json,application/json" hidden>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="図の拡大">
+  <div class="sh-head" style="display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--line)">
+    <h3 id="lbTitle" style="flex:1;margin:0;font-size:.95rem"></h3>
+    <div class="zoom"><button class="chip" id="lbMinus" type="button">－</button><button class="chip" id="lbPlus" type="button">＋</button></div>
+    <button class="ibtn" id="lbClose" type="button" aria-label="閉じる"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="lb-body"></div>
+</div>
+<div class="markbtn" id="markbtn"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+/* =========================================================
+   デジタルテキスト 共通エンジン
+   本文HTMLの決まった書き方（クラス名）を読み取り、
+   目次・進捗・ノート・リコール・問題・検索などを自動で組み立てる。
+   保存先：ブラウザの localStorage（キー：dtx:<book-id>:...）
+   ========================================================= */
+(function () {
+  'use strict';
+  var bookEl = document.querySelector('[data-book]');
+  var BOOK = (bookEl && bookEl.getAttribute('data-book')) || 'book';
+  /* claude.ai のリンク版（Artifact）で開かれているか。印刷・ファイル保存の方法が変わる */
+  function inArtifact() { return !!(window.claude && typeof window.claude.use === 'function'); }
+  var DL = null;
+  if (inArtifact()) { try { window.claude.use('downloads').then(function (d) { DL = d; }, function () { }); } catch (e) { } }
+  var PFX = 'dtx:' + BOOK + ':';
+  var FNAME = (document.title.split(/[（(]/)[0] || BOOK).replace(/[\\/:*?"<>|\s]/g, '');
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var NS = 'http://www.w3.org/2000/svg';
+  function tgt(e) { var t = e.target; return (t && t.nodeType === 1) ? t : ((t && t.parentElement) || document.body); }
+  var ICON = {
+    star: '<svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>',
+    flag: '<svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>',
+    copy: '<svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>',
+    zoom: '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>',
+    eye: '<svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+    save: '<svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>'
+  };
+
+  /* ---------- 保存 ---------- */
+  var store = {
+    get: function (k, d) { try { var v = localStorage.getItem(PFX + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem(PFX + k, JSON.stringify(v)); return true; } catch (e) { toast('保存できませんでした（ブラウザの設定やプライベートモードを確認してください）'); return false; } },
+    keys: function () { var o = []; try { for (var i = 0; i < localStorage.length; i++) { var k = localStorage.key(i); if (k.indexOf(PFX) === 0) o.push(k); } } catch (e) { } return o; }
+  };
+  var S = {
+    done: store.get('done', {}), bm: store.get('bm', {}), weak: store.get('weak', {}),
+    notes: store.get('notes', {}), marks: store.get('marks', {}), quiz: store.get('quiz', {}),
+    write: store.get('write', {}), prefs: store.get('prefs', {})
+  };
+  function save(k) { store.set(k, S[k]); }
+
+  /* ---------- 小道具 ---------- */
+  var toastTimer;
+  function toast(msg, actions, ms) {
+    var t = $('#toast');
+    t.innerHTML = '';
+    var sp = document.createElement('span'); sp.textContent = msg; t.appendChild(sp);
+    (actions || []).forEach(function (a) {
+      var b = document.createElement('button'); b.textContent = a.label; if (a.ghost) b.className = 'g';
+      b.onclick = function () { t.classList.remove('open'); a.fn && a.fn(); }; t.appendChild(b);
+    });
+    t.classList.add('open');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.classList.remove('open'); }, ms || (actions ? 9000 : 2200));
+  }
+  function copyText(text, okMsg) {
+    function fallback() {
+      var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.top = '-1000px';
+      document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand('copy'); } catch (e) { }
+      document.body.removeChild(ta);
+      toast(ok ? (okMsg || 'コピーしました') : 'コピーできませんでした');
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () { toast(okMsg || 'コピーしました'); }, fallback);
+    } else fallback();
+  }
+  function download(blob, name, okMsg) {
+    if (inArtifact()) {
+      if (!DL) { toast('この表示ではファイルを保存できません。HTMLファイル版で保存してください'); return; }
+      DL.save({ filename: name, data: blob }).then(function () { toast(okMsg || '保存しました'); }, function (err) {
+        var c = err && err.code;
+        if (c === 'declined') return;
+        toast(c === 'rate_limited' ? '少し待ってからもう一度押してください' : 'この表示ではファイルを保存できません');
+      });
+      return;
+    }
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+    if (okMsg) toast(okMsg);
+  }
+  /* 確認（confirm() はリンク版で使えないため、ページ内で確認する） */
+  function ask(msg, okLabel, fn) {
+    toast(msg, [{ label: okLabel, fn: fn }, { label: 'やめる', ghost: true }], 20000);
+  }
+  function today() { var d = new Date(); return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+  function norm(s) {
+    return (s || '').replace(/[Ａ-Ｚａ-ｚ０-９]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); })
+      .replace(/[\s　・,，、。()（）「」]/g, '').toLowerCase();
+  }
+  function textOf(el) { return (el.innerText || el.textContent || '').replace(/\n{3,}/g, '\n\n').trim(); }
+
+  /* ---------- 単元の把握 ---------- */
+  var units = $$('section.unit');
+  var unitById = {};
+  units.forEach(function (u, i) {
+    unitById[u.id] = u;
+    u.dataset.idx = i;
+  });
+  function utitle(u) { return u.getAttribute('data-title') || textOf($('h2', u)); }
+  function uno(u) { return u.getAttribute('data-no') || ''; }
+
+  /* ---------- ステップ見出しのバッジ ---------- */
+  var STEP = { '1': '① 全体像', '2': '② 構造', '3': '③ 機能', '4': '④ 仕組み', '5': '⑤ つながり', '6': '⑥ 鍼灸臨床', '7': '⑦ 思い出す', '8': '⑧ ノート', '9': '⑨ 確認問題', 'x': '＋ 検査・治療' };
+  units.forEach(function (u) {
+    $$('.step', u).forEach(function (st, i) {
+      st.id = st.id || (u.id + '-s' + (i + 1));
+      var h = $('h3', st); if (!h) return;
+      var lab = st.getAttribute('data-label') || STEP[st.getAttribute('data-step')] || '';
+      if (lab) { var b = document.createElement('span'); b.className = 'badge'; b.textContent = lab; h.insertBefore(b, h.firstChild); }
+    });
+  });
+
+  /* ---------- 段落ID（マーカー・検索・続きから用） ---------- */
+  var BLOCKS = 'p, li, td, th, dd, figcaption, h3, h4, h5, .rq-q, .stem, .cap';
+  units.forEach(function (u) {
+    $$(BLOCKS, u).forEach(function (el, i) {
+      if (el.closest('.toc, svg, .ntools, .qtools')) return;
+      if (el.querySelector('p, li, td, h3, h4, h5, ul, ol, table')) return;
+      el.setAttribute('data-bid', u.id + '.' + i);
+    });
+  });
+
+  /* ---------- 目次 ---------- */
+  function buildTOC() {
+    var toc = $('#toc'); toc.innerHTML = '<h2>目次</h2>';
+    var parts = [], pmap = {};
+    units.forEach(function (u) {
+      var p = u.getAttribute('data-part') || '';
+      if (!pmap[p]) { pmap[p] = { name: p, units: [] }; parts.push(pmap[p]); }
+      pmap[p].units.push(u);
+    });
+    parts.forEach(function (p) {
+      if (p.name) {
+        var d = document.createElement('div'); d.className = 'part'; d.innerHTML = '<span></span><em></em>';
+        d.firstChild.textContent = p.name; d.dataset.part = p.name; toc.appendChild(d);
+        var bar = document.createElement('div'); bar.className = 'pbar'; bar.innerHTML = '<i></i>'; bar.dataset.part = p.name; toc.appendChild(bar);
+      }
+      var ol = document.createElement('ol');
+      p.units.forEach(function (u) {
+        var li = document.createElement('li'); li.dataset.unit = u.id;
+        var a = document.createElement('a'); a.href = '#' + u.id;
+        a.innerHTML = '<span class="no"></span><span class="tt"></span><span class="bm"></span><span class="ck">✓</span>';
+        a.querySelector('.no').textContent = uno(u); a.querySelector('.tt').textContent = utitle(u);
+        li.appendChild(a);
+        var subs = document.createElement('div'); subs.className = 'subs';
+        $$('.step', u).forEach(function (st) {
+          var h = $('h3', st); if (!h) return;
+          var sa = document.createElement('a'); sa.href = '#' + st.id; sa.dataset.step = st.id;
+          sa.textContent = textOf(h).replace(/\s+/g, ' ');
+          subs.appendChild(sa);
+        });
+        li.appendChild(subs); ol.appendChild(li);
+      });
+      toc.appendChild(ol);
+    });
+    toc.addEventListener('click', function (e) { if (tgt(e).closest('a')) closeTOC(); });
+    refreshTOC();
+  }
+  function refreshTOC() {
+    $$('#toc li[data-unit]').forEach(function (li) {
+      li.classList.toggle('done', !!S.done[li.dataset.unit]);
+      $('.bm', li).textContent = S.bm[li.dataset.unit] ? '★' : '';
+    });
+    $$('#toc .part').forEach(function (d) {
+      var us = units.filter(function (u) { return (u.getAttribute('data-part') || '') === d.dataset.part; });
+      var n = us.filter(function (u) { return S.done[u.id]; }).length;
+      d.querySelector('em').textContent = n + ' / ' + us.length;
+      var bar = $('.pbar[data-part="' + d.dataset.part + '"] i');
+      if (bar) bar.style.width = (us.length ? 100 * n / us.length : 0) + '%';
+    });
+    var total = units.length, dn = units.filter(function (u) { return S.done[u.id]; }).length;
+    $('#progLabel').textContent = dn + '/' + total;
+  }
+  function scrollTocToCur() {
+    var toc = $('#toc'), li = $('#toc li.cur');
+    if (!li) return;
+    var top = li.offsetTop, h = toc.clientHeight;
+    if (top < toc.scrollTop + 40 || top > toc.scrollTop + h - 120) toc.scrollTop = Math.max(0, top - h / 3);
+  }
+  function openTOC() { $('#toc').classList.add('open'); scrollTocToCur(); }
+  function closeTOC() { $('#toc').classList.remove('open'); }
+  $('#btnToc').onclick = function () { if ($('#toc').classList.contains('open')) closeTOC(); else openTOC(); };
+  document.addEventListener('click', function (e) {
+    var toc = $('#toc');
+    if (toc.classList.contains('open') && !tgt(e).closest('#toc') && !tgt(e).closest('#btnToc')) closeTOC();
+  });
+
+  /* ---------- 単元ヘッダー・フッター ---------- */
+  units.forEach(function (u, i) {
+    var head = $('.unit-head', u);
+    var tools = document.createElement('div'); tools.className = 'unit-tools';
+    var bm = document.createElement('button'); bm.className = 'chip'; bm.type = 'button';
+    bm.innerHTML = ICON.star + '<span>ブックマーク</span>';
+    bm.onclick = function () { if (S.bm[u.id]) delete S.bm[u.id]; else S.bm[u.id] = today(); save('bm'); syncUnit(u); refreshTOC(); toast(S.bm[u.id] ? 'ブックマークしました' : 'ブックマークを外しました'); };
+    var wk = document.createElement('button'); wk.className = 'chip'; wk.type = 'button';
+    wk.innerHTML = ICON.flag + '<span>苦手に登録</span>';
+    wk.onclick = function () {
+      var id = 'unit:' + u.id;
+      if (S.weak[id]) delete S.weak[id]; else S.weak[id] = { unit: u.id, label: 'テーマ全体：' + utitle(u), t: today() };
+      save('weak'); syncUnit(u); toast(S.weak[id] ? '苦手に登録しました（学習記録で確認できます）' : '苦手から外しました');
+    };
+    tools.appendChild(bm); tools.appendChild(wk);
+    if (head) head.appendChild(tools);
+    u._bm = bm; u._wk = wk;
+
+    var foot = document.createElement('div'); foot.className = 'unit-foot';
+    var db = document.createElement('button'); db.className = 'donebtn'; db.type = 'button';
+    db.onclick = function () {
+      if (S.done[u.id]) delete S.done[u.id]; else S.done[u.id] = today();
+      save('done'); syncUnit(u); refreshTOC();
+      if (S.done[u.id]) toast('「' + utitle(u) + '」を学習済みにしました');
+    };
+    foot.appendChild(db);
+    var nx = units[i + 1];
+    if (nx) { var a = document.createElement('a'); a.className = 'nextlink'; a.href = '#' + nx.id; a.textContent = '次へ：' + uno(nx) + ' ' + utitle(nx) + ' →'; foot.appendChild(a); }
+    u.appendChild(foot); u._done = db;
+    syncUnit(u);
+  });
+  function syncUnit(u) {
+    u._bm.classList.toggle('on', !!S.bm[u.id]);
+    u._wk.classList.toggle('on', !!S.weak['unit:' + u.id]);
+    u._wk.querySelector('span').textContent = S.weak['unit:' + u.id] ? '苦手に登録中' : '苦手に登録';
+    u._done.classList.toggle('on', !!S.done[u.id]);
+    u._done.textContent = S.done[u.id] ? '✓ 学習済み（取り消す）' : 'このテーマを学習済みにする';
+  }
+
+  /* ---------- 用語ポップアップ ---------- */
+  var pop = null;
+  function closePop() { if (pop) { pop.remove(); pop = null; } }
+  document.addEventListener('click', function (e) {
+    var d = tgt(e).closest('dfn[data-def]');
+    if (!d) { if (!tgt(e).closest('.pop')) closePop(); return; }
+    closePop();
+    pop = document.createElement('div'); pop.className = 'pop';
+    var b = document.createElement('b'); b.textContent = d.textContent + '：'; pop.appendChild(b);
+    pop.appendChild(document.createTextNode(d.getAttribute('data-def')));
+    document.body.appendChild(pop);
+    var r = d.getBoundingClientRect(), pw = pop.offsetWidth;
+    var left = Math.min(Math.max(8, r.left + window.scrollX), window.scrollX + document.documentElement.clientWidth - pw - 8);
+    pop.style.left = left + 'px'; pop.style.top = (r.bottom + window.scrollY + 6) + 'px';
+  });
+
+  /* ---------- 重要語句を隠す ---------- */
+  document.addEventListener('click', function (e) {
+    var k = tgt(e).closest('.key');
+    if (k && k.closest('.hide-keys')) { k.classList.toggle('shown'); e.preventDefault(); }
+  });
+  function setGlobalHide(on) {
+    document.body.classList.toggle('hide-keys', on);
+    if (!on) $$('.key.shown').forEach(function (k) { k.classList.remove('shown'); });
+    S.prefs.hideKeys = on; save('prefs'); syncMenu();
+  }
+
+  /* ---------- 図：名称を隠す・拡大・保存 ---------- */
+  var SVG_CSS = ($('#svg-css') || { textContent: '' }).textContent;
+  function hideNames(svg, on) {
+    $$('.lbmask, .lbq', svg).forEach(function (m) { m.remove(); });
+    $$('.nm', svg).forEach(function (t) {
+      t.classList.toggle('hid', on);
+      if (!on) return;
+      var bb; try { bb = t.getBBox(); } catch (e) { return; }
+      if (!bb.width) return;
+      var r = document.createElementNS(NS, 'rect');
+      r.setAttribute('x', bb.x - 4); r.setAttribute('y', bb.y - 2); r.setAttribute('width', bb.width + 8); r.setAttribute('height', bb.height + 4);
+      r.setAttribute('rx', 5); r.setAttribute('class', 'lbmask');
+      var q = document.createElementNS(NS, 'text');
+      q.setAttribute('x', bb.x + bb.width / 2); q.setAttribute('y', bb.y + bb.height / 2 + 1); q.setAttribute('text-anchor', 'middle'); q.setAttribute('class', 'lbq');
+      q.textContent = '?';
+      r.addEventListener('click', function (ev) { ev.stopPropagation(); t.classList.remove('hid'); r.remove(); q.remove(); });
+      t.parentNode.insertBefore(r, t.nextSibling); t.parentNode.insertBefore(q, r.nextSibling);
+    });
+    svg._hidden = on;
+  }
+  function svgToPng(svg, name) {
+    var clone = svg.cloneNode(true);
+    $$('.lbmask, .lbq', clone).forEach(function (m) { m.remove(); });
+    $$('.nm', clone).forEach(function (t) { t.classList.remove('hid'); });
+    var vb = svg.viewBox.baseVal, w = vb.width, h = vb.height;
+    clone.setAttribute('width', w); clone.setAttribute('height', h);
+    var st = document.createElementNS(NS, 'style'); st.textContent = SVG_CSS; clone.insertBefore(st, clone.firstChild);
+    var data = new XMLSerializer().serializeToString(clone);
+    var img = new Image();
+    img.onload = function () {
+      var sc = 3, c = document.createElement('canvas'); c.width = w * sc; c.height = h * sc;
+      var ctx = c.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height);
+      ctx.drawImage(img, 0, 0, c.width, c.height);
+      try { c.toBlob(function (b) { if (b) { download(b, name + '.png', '画像を保存しました'); } else toast('画像を作れませんでした'); }, 'image/png'); }
+      catch (e) { toast('このブラウザでは画像保存ができません'); }
+    };
+    img.onerror = function () { toast('画像を作れませんでした'); };
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(data);
+  }
+  function figName(fig) {
+    var u = fig.closest('.unit');
+    var cap = $('figcaption', fig);
+    var t = (cap ? textOf(cap).split(/[：:。\n]/)[0] : 'figure').replace(/[\\/:*?"<>|\s]/g, '').slice(0, 30);
+    return (u ? uno(u) + '_' : '') + t;
+  }
+  function lightbox(svg, title) {
+    var lb = $('#lightbox'), body = $('.lb-body', lb);
+    body.innerHTML = '';
+    var c = svg.cloneNode(true); $$('.lbmask, .lbq', c).forEach(function (m) { m.remove(); }); $$('.nm', c).forEach(function (t) { t.classList.remove('hid'); });
+    body.appendChild(c); $('#lbTitle').textContent = title || '図'; lb._scale = 1; c.style.minWidth = '640px'; c.style.maxWidth = 'none'; c.style.width = '100%';
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+  }
+  $('#lbClose').onclick = function () { $('#lightbox').classList.remove('open'); document.body.style.overflow = ''; };
+  $('#lbPlus').onclick = function () { var lb = $('#lightbox'), s = $('.lb-body svg', lb); lb._scale = Math.min(3, (lb._scale || 1) + 0.5); s.style.width = (lb._scale * 100) + '%'; };
+  $('#lbMinus').onclick = function () { var lb = $('#lightbox'), s = $('.lb-body svg', lb); lb._scale = Math.max(1, (lb._scale || 1) - 0.5); s.style.width = (lb._scale * 100) + '%'; };
+
+  $$('.fig').forEach(function (fig) {
+    var svgs = $$('svg.dg', fig); if (!svgs.length) return;
+    var bar = document.createElement('div'); bar.className = 'figbar';
+    function cur() { var f = $('.frame.on svg.dg', fig); return f || svgs[0]; }
+    var bz = document.createElement('button'); bz.className = 'chip'; bz.type = 'button'; bz.innerHTML = ICON.zoom + '拡大';
+    bz.onclick = function () { var cap = $('figcaption', fig); lightbox(cur(), cap ? textOf(cap).split('\n')[0] : ''); };
+    bar.appendChild(bz);
+    if ($$('.nm', fig).length) {
+      var bh = document.createElement('button'); bh.className = 'chip'; bh.type = 'button'; bh.innerHTML = ICON.eye + '<span>名称を隠す</span>';
+      bh.onclick = function () {
+        var on = !fig._hid; fig._hid = on;
+        svgs.forEach(function (s) { hideNames(s, on); });
+        bh.classList.toggle('on', on); bh.querySelector('span').textContent = on ? '名称を表示（?をタップで1つずつ）' : '名称を隠す';
+      };
+      bar.appendChild(bh); fig._hideBtn = bh;
+    }
+    var bs = document.createElement('button'); bs.className = 'chip'; bs.type = 'button'; bs.innerHTML = ICON.save + '画像で保存';
+    bs.onclick = function () { svgToPng(cur(), figName(fig)); };
+    bar.appendChild(bs);
+    fig.appendChild(bar);
+  });
+  function setFigHide(scope, on) {
+    $$('.fig', scope).forEach(function (fig) {
+      if (!fig._hideBtn) return;
+      if (!!fig._hid !== on) fig._hideBtn.click();
+    });
+  }
+
+  /* ---------- コマ送り図 ---------- */
+  $$('.stepper').forEach(function (sp) {
+    var frames = $$('.frame', sp); if (!frames.length) return;
+    var i = 0;
+    var ctrl = document.createElement('div'); ctrl.className = 'ctrl';
+    var pv = document.createElement('button'); pv.className = 'chip'; pv.type = 'button'; pv.textContent = '← 前へ';
+    var nx = document.createElement('button'); nx.className = 'chip'; nx.type = 'button'; nx.textContent = '次へ →';
+    var dots = document.createElement('div'); dots.className = 'dots';
+    frames.forEach(function () { dots.appendChild(document.createElement('i')); });
+    ctrl.appendChild(pv); ctrl.appendChild(dots); ctrl.appendChild(nx);
+    sp.insertBefore(ctrl, frames[frames.length - 1].nextSibling);
+    function show(n) {
+      i = (n + frames.length) % frames.length;
+      frames.forEach(function (f, k) { f.classList.toggle('on', k === i); });
+      $$('i', dots).forEach(function (d, k) { d.classList.toggle('on', k === i); });
+      var fig = sp.closest('.fig');
+      if (fig && fig._hid) { var s = $('svg.dg', frames[i]); hideNames(s, true); }
+    }
+    pv.onclick = function () { show(i - 1); }; nx.onclick = function () { show(i + 1); };
+    show(0);
+  });
+
+  /* ---------- 折りたたみの中身 ---------- */
+  $$('details.more, details.adv').forEach(function (d) {
+    if ($('.dbody', d)) return;
+    var body = document.createElement('div'); body.className = 'dbody';
+    while (d.childNodes.length > 1) { var n = d.childNodes[1]; if (n.nodeName === 'SUMMARY') break; body.appendChild(n); }
+    d.appendChild(body);
+  });
+
+  /* ---------- 思い出す ---------- */
+  units.forEach(function (u) {
+    var st = $('.step[data-step="7"]', u);
+    if (st) {
+      var tools = document.createElement('div'); tools.className = 'recall-tools';
+      var k = document.createElement('button'); k.className = 'chip'; k.type = 'button'; k.textContent = 'このテーマの重要語句を隠す';
+      k.onclick = function () {
+        var on = !u.classList.contains('hide-keys'); u.classList.toggle('hide-keys', on);
+        if (!on) $$('.key.shown', u).forEach(function (x) { x.classList.remove('shown'); });
+        k.classList.toggle('on', on); k.textContent = on ? '重要語句を表示に戻す' : 'このテーマの重要語句を隠す';
+        if (on) { toast('上に戻って読み直してみよう。隠れた語句はタップで表示'); }
+      };
+      var f = document.createElement('button'); f.className = 'chip'; f.type = 'button'; f.textContent = 'このテーマの図の名称を隠す';
+      f.onclick = function () {
+        var on = !f.classList.contains('on'); f.classList.toggle('on', on);
+        f.textContent = on ? '図の名称を表示に戻す' : 'このテーマの図の名称を隠す';
+        setFigHide(u, on);
+      };
+      tools.appendChild(k); tools.appendChild(f);
+      var h = $('h3', st); h.parentNode.insertBefore(tools, h.nextSibling);
+    }
+    $$('.rq', u).forEach(function (rq) {
+      var b = document.createElement('button'); b.className = 'chip'; b.type = 'button'; b.textContent = '頭の中で答えてから → 答えを見る';
+      b.onclick = function () { var o = rq.classList.toggle('open'); b.textContent = o ? '答えを隠す' : '頭の中で答えてから → 答えを見る'; };
+      var a = $('.rq-a', rq); rq.insertBefore(b, a);
+    });
+  });
+
+  /* ---------- まとめ（要点をコピー） ---------- */
+  $$('.summary').forEach(function (sm) {
+    var u = sm.closest('.unit');
+    var t = document.createElement('div'); t.className = 'sum-tools';
+    var b = document.createElement('button'); b.className = 'chip'; b.type = 'button'; b.innerHTML = ICON.copy + '要点をまとめてコピー';
+    b.onclick = function () {
+      var lines = ['■ ' + uno(u) + ' ' + utitle(u)];
+      $$('li', sm).forEach(function (li) { lines.push('・' + textOf(li)); });
+      copyText(lines.join('\n'), '要点をコピーしました。ノートアプリに貼り付けできます');
+    };
+    t.appendChild(b); sm.appendChild(t);
+  });
+
+  /* ---------- ノート ---------- */
+  var noteTimers = {};
+  $$('.note').forEach(function (nt) {
+    var u = nt.closest('.unit');
+    var i = u ? $$('.note', u).indexOf(nt) + 1 : 0;
+    var id = nt.getAttribute('data-id') || (u ? u.id : 'n') + '-note' + i;
+    nt.dataset.id = id;
+    var pr = nt.getAttribute('data-prompt');
+    if (pr) { var p = document.createElement('div'); p.className = 'prompt'; p.textContent = pr; nt.appendChild(p); }
+    var hint = nt.getAttribute('data-hint');
+    if (hint) { var hp = document.createElement('p'); hp.className = 'hint'; hp.textContent = hint; nt.appendChild(hp); }
+    var ta = document.createElement('textarea'); ta.placeholder = 'ここに自分の言葉で書く（自動で保存されます）';
+    ta.value = S.notes[id] || '';
+    ta.setAttribute('aria-label', pr || 'ノート');
+    var mirror = document.createElement('div'); mirror.className = 'note-print'; mirror.textContent = ta.value;
+    var tools = document.createElement('div'); tools.className = 'ntools';
+    var cb = document.createElement('button'); cb.className = 'chip'; cb.type = 'button'; cb.innerHTML = ICON.copy + 'ノートをコピー';
+    cb.onclick = function () { if (!ta.value.trim()) { toast('まだ何も書かれていません'); return; } copyText(ta.value, 'ノートをコピーしました'); };
+    var sv = document.createElement('span'); sv.className = 'saved'; sv.textContent = ta.value ? '保存済み' : '';
+    tools.appendChild(cb); tools.appendChild(sv);
+    ta.addEventListener('input', function () {
+      mirror.textContent = ta.value; sv.textContent = '入力中…';
+      clearTimeout(noteTimers[id]);
+      noteTimers[id] = setTimeout(function () {
+        if (ta.value.trim()) S.notes[id] = ta.value; else delete S.notes[id];
+        if (save('notes') !== false) sv.textContent = '保存しました ' + new Date().toLocaleTimeString().slice(0, 5);
+      }, 500);
+    });
+    nt.appendChild(ta); nt.appendChild(mirror); nt.appendChild(tools);
+  });
+
+  /* ---------- 確認問題 ---------- */
+  function addWeak(q, ok) {
+    var id = q.dataset.qid, u = q.closest('.unit');
+    var stem = $('.stem', q); var label = stem ? textOf(stem).replace(/\s+/g, ' ').slice(0, 60) : id;
+    if (!ok) S.weak[id] = { unit: u.id, label: label, t: today(), q: 1 };
+    else if (S.weak[id] && S.weak[id].q) delete S.weak[id];
+    save('weak');
+  }
+  function record(q, ok) { S.quiz[q.dataset.qid] = { ok: ok, t: today() }; save('quiz'); addWeak(q, ok); updateScore(q.closest('.unit')); }
+  function updateScore(u) {
+    var box = $('.qscore', u); if (!box) return;
+    var qs = $$('.q[data-qid]', u).filter(function (q) { return !q.classList.contains('write'); });
+    var ans = qs.filter(function (q) { return S.quiz[q.dataset.qid]; });
+    var ok = ans.filter(function (q) { return S.quiz[q.dataset.qid].ok; });
+    box.textContent = ans.length ? ('前回までの結果：' + qs.length + '問中 ' + ans.length + '問解答・' + ok.length + '問正解') : '';
+  }
+  units.forEach(function (u) {
+    var qs = $$('.q', u); if (!qs.length) return;
+    qs.forEach(function (q, i) {
+      q.dataset.qid = q.getAttribute('data-id') || (u.id + '-q' + (i + 1));
+      var no = document.createElement('div'); no.className = 'qno'; no.textContent = 'Q' + (i + 1) + (q.classList.contains('mc') ? '　4択' : q.classList.contains('fill') ? '　穴埋め' : '　記述');
+      q.insertBefore(no, q.firstChild);
+      var tools = document.createElement('div'); tools.className = 'qtools';
+      var exp = $('.exp', q);
+      if (q.classList.contains('mc')) {
+        var ans = parseInt(q.getAttribute('data-ans'), 10);
+        $$('ol.opts > li', q).forEach(function (li, k) {
+          var b = document.createElement('button'); b.type = 'button';
+          b.innerHTML = '<span class="n">' + (k + 1) + '</span><span></span>';
+          while (li.firstChild) b.lastChild.appendChild(li.firstChild);
+          li.appendChild(b);
+          b.onclick = function () {
+            if (q.classList.contains('answered')) return;
+            var ok = (k + 1) === ans;
+            b.classList.add(ok ? 'right' : 'wrong');
+            if (!ok) $$('ol.opts button', q)[ans - 1].classList.add('right');
+            q.classList.add('answered');
+            var r = document.createElement('span'); r.className = 'res ' + (ok ? 'ok' : 'ng'); r.textContent = ok ? '正解！' : '不正解…（苦手リストに追加）';
+            if (exp) exp.insertBefore(r, exp.firstChild);
+            record(q, ok);
+          };
+        });
+      } else if (q.classList.contains('fill')) {
+        $$('.fb', q).forEach(function (sp) {
+          var inp = document.createElement('input'); inp.type = 'text'; inp.className = 'fb'; inp.dataset.a = sp.getAttribute('data-a');
+          inp.setAttribute('aria-label', '空欄'); inp.autocomplete = 'off';
+          sp.parentNode.replaceChild(inp, sp);
+        });
+        var chk = document.createElement('button'); chk.className = 'chip'; chk.type = 'button'; chk.textContent = '答え合わせ';
+        chk.onclick = function () {
+          $$('.fbans', q).forEach(function (x) { x.remove(); });
+          var all = true;
+          $$('input.fb', q).forEach(function (inp) {
+            var alts = inp.dataset.a.split('|');
+            var ok = alts.some(function (a) { return norm(a) === norm(inp.value); });
+            inp.classList.toggle('right', ok); inp.classList.toggle('wrong', !ok);
+            if (!ok) { all = false; var s = document.createElement('span'); s.className = 'fbans'; s.textContent = '→ ' + alts[0]; inp.parentNode.insertBefore(s, inp.nextSibling); }
+          });
+          q.classList.add('answered');
+          var old = $('.res', q); if (old) old.remove();
+          var r = document.createElement('span'); r.className = 'res ' + (all ? 'ok' : 'ng'); r.textContent = all ? '全問正解！' : '赤い欄を見直そう（苦手リストに追加）';
+          if (exp) exp.insertBefore(r, exp.firstChild);
+          record(q, all);
+        };
+        tools.appendChild(chk);
+      } else if (q.classList.contains('write')) {
+        var ta = document.createElement('textarea'); ta.placeholder = '見ないで、自分の言葉で書いてみよう（自動保存）';
+        ta.value = S.write[q.dataset.qid] || ''; ta.style.minHeight = '110px';
+        var mirror = document.createElement('div'); mirror.className = 'note-print'; mirror.textContent = ta.value;
+        var tm;
+        ta.addEventListener('input', function () { mirror.textContent = ta.value; clearTimeout(tm); tm = setTimeout(function () { if (ta.value.trim()) S.write[q.dataset.qid] = ta.value; else delete S.write[q.dataset.qid]; save('write'); }, 500); });
+        q.insertBefore(mirror, exp); q.insertBefore(ta, mirror);
+        var show = document.createElement('button'); show.className = 'chip'; show.type = 'button'; show.textContent = '書けたら → 模範解答を見る';
+        show.onclick = function () {
+          if (!ta.value.trim() && !q.classList.contains('answered')) { toast('先に自分の答えを書いてみよう（1行でもOK）', [{ label: 'それでも見る', fn: function () { q.classList.add('answered'); } }]); return; }
+          q.classList.add('answered');
+        };
+        var good = document.createElement('button'); good.className = 'chip'; good.type = 'button'; good.textContent = '書けた';
+        good.onclick = function () { if (!q.classList.contains('answered')) { toast('模範解答と見比べてから評価しよう'); return; } record(q, true); toast('よくできました'); };
+        var bad = document.createElement('button'); bad.className = 'chip'; bad.type = 'button'; bad.textContent = 'もう一度（苦手へ）';
+        bad.onclick = function () { if (!q.classList.contains('answered')) { toast('模範解答と見比べてから評価しよう'); return; } record(q, false); toast('苦手リストに追加しました'); };
+        tools.appendChild(show); tools.appendChild(good); tools.appendChild(bad);
+      }
+      var reset = document.createElement('button'); reset.className = 'chip'; reset.type = 'button'; reset.textContent = 'もう一度解く';
+      reset.onclick = function () {
+        q.classList.remove('answered');
+        $$('.res, .fbans', q).forEach(function (x) { x.remove(); });
+        $$('ol.opts button', q).forEach(function (b) { b.classList.remove('right', 'wrong'); });
+        $$('input.fb', q).forEach(function (inp) { inp.value = ''; inp.classList.remove('right', 'wrong'); });
+      };
+      if (!q.classList.contains('write')) tools.appendChild(reset);
+      q.insertBefore(tools, exp);
+    });
+    var last = qs[qs.length - 1];
+    var sc = document.createElement('p'); sc.className = 'qscore'; last.parentNode.insertBefore(sc, last.nextSibling);
+    updateScore(u);
+  });
+
+  /* ---------- マーカー ---------- */
+  var mb = $('#markbtn');
+  function blockOf(node) { var el = node.nodeType === 1 ? node : node.parentNode; return el && el.closest ? el.closest('[data-bid]') : null; }
+  function offsetIn(block, node, off) {
+    var w = document.createTreeWalker(block, NodeFilter.SHOW_TEXT), n, pos = 0;
+    while ((n = w.nextNode())) { if (n === node) return pos + off; pos += n.nodeValue.length; }
+    if (node.nodeType === 1) { // 要素ノードが指定された場合
+      var r = document.createRange(); r.setStart(block, 0); r.setEnd(node, off); return r.toString().length;
+    }
+    return -1;
+  }
+  function wrapRange(block, s, e, id) {
+    var w = document.createTreeWalker(block, NodeFilter.SHOW_TEXT), n, pos = 0, list = [];
+    while ((n = w.nextNode())) {
+      var len = n.nodeValue.length, a = Math.max(s, pos), b = Math.min(e, pos + len);
+      if (a < b) list.push([n, a - pos, b - pos]);
+      pos += len;
+    }
+    list.forEach(function (it) {
+      var node = it[0];
+      if (node.parentNode.closest('input, textarea, button')) return;
+      var mid = node.splitText(it[1]); mid.splitText(it[2] - it[1]);
+      var m = document.createElement('mark'); m.className = 'hl'; m.dataset.hid = id;
+      mid.parentNode.replaceChild(m, mid); m.appendChild(mid);
+    });
+  }
+  function restoreMarks() {
+    Object.keys(S.marks).forEach(function (bid) {
+      var block = $('[data-bid="' + bid + '"]'); if (!block) return;
+      S.marks[bid] = S.marks[bid].filter(function (m) {
+        var txt = block.textContent;
+        if (txt.slice(m.s, m.e) !== m.t) { var k = txt.indexOf(m.t); if (k < 0) return false; m.s = k; m.e = k + m.t.length; }
+        wrapRange(block, m.s, m.e, m.id); return true;
+      });
+    });
+  }
+  function selInfo() {
+    var sel = window.getSelection(); if (!sel || sel.isCollapsed || !sel.rangeCount) return null;
+    var r = sel.getRangeAt(0);
+    var b1 = blockOf(r.startContainer), b2 = blockOf(r.endContainer);
+    if (!b1 || !b1.closest('main')) return null;
+    if (b1.closest('.q, .note, .rq-a, svg')) return null;
+    if (b1 !== b2) return { cross: true, rect: r.getBoundingClientRect() };
+    var s = offsetIn(b1, r.startContainer, r.startOffset), e = offsetIn(b1, r.endContainer, r.endOffset);
+    if (s < 0 || e <= s) return null;
+    return { block: b1, s: s, e: e, t: b1.textContent.slice(s, e), rect: r.getBoundingClientRect() };
+  }
+  var curSel = null, curMark = null;
+  function showMB(rect, mode) {
+    mb.innerHTML = '';
+    var add = function (label, fn) { var b = document.createElement('button'); b.type = 'button'; b.textContent = label; b.onmousedown = function (e) { e.preventDefault(); }; b.onclick = fn; mb.appendChild(b); };
+    if (mode === 'add') { add('マーカーを引く', applyMark); add('コピー', function () { copyText(curSel.t); hideMB(); }); }
+    else add('マーカーを消す', removeMark);
+    mb.style.display = 'flex';
+    var top = rect.top + window.scrollY - mb.offsetHeight - 10;
+    if (top < window.scrollY + 60) top = rect.bottom + window.scrollY + 10;
+    var left = Math.min(Math.max(8, rect.left + window.scrollX + rect.width / 2 - mb.offsetWidth / 2), window.scrollX + document.documentElement.clientWidth - mb.offsetWidth - 8);
+    mb.style.top = top + 'px'; mb.style.left = left + 'px';
+  }
+  function hideMB() { mb.style.display = 'none'; curSel = null; curMark = null; }
+  function applyMark() {
+    if (!curSel) return;
+    var id = 'm' + Date.now().toString(36);
+    var bid = curSel.block.getAttribute('data-bid');
+    (S.marks[bid] = S.marks[bid] || []).push({ id: id, s: curSel.s, e: curSel.e, t: curSel.t });
+    wrapRange(curSel.block, curSel.s, curSel.e, id);
+    save('marks'); window.getSelection().removeAllRanges(); hideMB();
+  }
+  function removeMark() {
+    if (!curMark) return;
+    var id = curMark.dataset.hid, block = curMark.closest('[data-bid]'), bid = block && block.getAttribute('data-bid');
+    $$('mark.hl[data-hid="' + id + '"]').forEach(function (m) { var p = m.parentNode; while (m.firstChild) p.insertBefore(m.firstChild, m); p.removeChild(m); p.normalize(); });
+    if (bid && S.marks[bid]) { S.marks[bid] = S.marks[bid].filter(function (m) { return m.id !== id; }); if (!S.marks[bid].length) delete S.marks[bid]; }
+    save('marks'); hideMB();
+  }
+  function onSelEnd() {
+    setTimeout(function () {
+      var info = selInfo();
+      if (!info) { if (!curMark) hideMB(); return; }
+      if (info.cross) { toast('マーカーは1つの段落の中で選んでください'); return; }
+      curSel = info; curMark = null; showMB(info.rect, 'add');
+    }, 10);
+  }
+  document.addEventListener('mouseup', function (e) { if (!tgt(e).closest('#markbtn')) onSelEnd(); });
+  document.addEventListener('touchend', function (e) { if (!tgt(e).closest('#markbtn')) setTimeout(onSelEnd, 250); });
+  document.addEventListener('click', function (e) {
+    var m = tgt(e).closest('mark.hl');
+    if (m && window.getSelection().isCollapsed) { curMark = m; curSel = null; showMB(m.getBoundingClientRect(), 'del'); return; }
+    if (!tgt(e).closest('#markbtn') && window.getSelection().isCollapsed) hideMB();
+  });
+
+  /* ---------- 現在位置・読了バー・続きから ---------- */
+  var curUnit = null, curStep = null, posTimer;
+  function onScroll() {
+    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    $('#readbar').style.width = (max > 0 ? 100 * h.scrollTop / max : 0) + '%';
+    var y = 80, u = null, st = null;
+    for (var i = 0; i < units.length; i++) { if (units[i].getBoundingClientRect().top - y <= 0) u = units[i]; else break; }
+    if (u) { $$('.step', u).forEach(function (s) { if (s.getBoundingClientRect().top - y - 40 <= 0) st = s; }); }
+    if (u !== curUnit) {
+      curUnit = u;
+      $$('#toc li[data-unit]').forEach(function (li) { li.classList.toggle('cur', u && li.dataset.unit === u.id); });
+      scrollTocToCur();
+      $('#curTitle').textContent = u ? (uno(u) + ' ' + utitle(u)) : $('#curTitle').getAttribute('data-default');
+    }
+    if (st !== curStep) { curStep = st; $$('#toc .subs a').forEach(function (a) { a.classList.toggle('cur', st && a.dataset.step === st.id); }); }
+    clearTimeout(posTimer);
+    posTimer = setTimeout(function () {
+      var el = null;
+      $$('[data-bid]', u || document).some(function (b) { var r = b.getBoundingClientRect(); if (r.top >= 60 && r.height) { el = b; return true; } return false; });
+      if (u) store.set('pos', { unit: u.id, bid: el ? el.getAttribute('data-bid') : null, y: window.scrollY, t: Date.now() });
+    }, 600);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  function flash(el) { el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+  function goTo(el) { if (!el) return; var d = el.closest('details'); if (d) d.open = true; el.scrollIntoView({ behavior: 'smooth', block: 'center' }); flash(el); }
+
+  /* ---------- 検索 ---------- */
+  var sIndex = null;
+  function buildIndex() {
+    sIndex = [];
+    units.forEach(function (u) {
+      $$('[data-bid]', u).forEach(function (b) { sIndex.push({ u: u, el: b, t: (b.textContent || '').replace(/\s+/g, ' ') }); });
+      $$('svg.dg', u).forEach(function (s) {
+        var fig = s.closest('.fig'); var txt = $$('text', s).map(function (t) { return t.textContent; }).join(' ');
+        sIndex.push({ u: u, el: fig || s, t: '［図］' + txt.replace(/\s+/g, ' ') });
+      });
+      $$('dfn[data-def]', u).forEach(function (d) { sIndex.push({ u: u, el: d, t: '［用語］' + d.textContent + '：' + d.getAttribute('data-def') }); });
+    });
+  }
+  function doSearch(q) {
+    var ul = $('#sres'); ul.innerHTML = '';
+    q = q.trim(); if (!q) { $('#sinfo').textContent = '語句を入力すると、本文・図・用語から探します'; return; }
+    if (!sIndex) buildIndex();
+    var ql = q.toLowerCase(), hits = sIndex.filter(function (x) { return x.t.toLowerCase().indexOf(ql) >= 0; });
+    $('#sinfo').textContent = hits.length + '件見つかりました' + (hits.length > 60 ? '（上位60件を表示）' : '');
+    hits.slice(0, 60).forEach(function (h) {
+      var li = document.createElement('li'), a = document.createElement('a'); a.href = '#';
+      var k = h.t.toLowerCase().indexOf(ql), st = Math.max(0, k - 28);
+      var pre = (st > 0 ? '…' : '') + h.t.slice(st, k), mid = h.t.slice(k, k + q.length), post = h.t.slice(k + q.length, k + q.length + 50) + '…';
+      var u = document.createElement('div'); u.className = 'u'; u.textContent = uno(h.u) + ' ' + utitle(h.u);
+      var t = document.createElement('div'); t.className = 't';
+      t.appendChild(document.createTextNode(pre)); var em = document.createElement('em'); em.textContent = mid; t.appendChild(em); t.appendChild(document.createTextNode(post));
+      a.appendChild(u); a.appendChild(t);
+      a.onclick = function (e) { e.preventDefault(); closeSheets(); setTimeout(function () { goTo(h.el); }, 50); };
+      li.appendChild(a); ul.appendChild(li);
+    });
+  }
+  var sTimer;
+  $('#sinput').addEventListener('input', function (e) { clearTimeout(sTimer); sTimer = setTimeout(function () { doSearch(e.target.value); }, 200); });
+
+  /* ---------- パネル類 ---------- */
+  function closeSheets() { $$('.sheet.open').forEach(function (s) { s.classList.remove('open'); }); $('#overlay').classList.remove('open'); $('#menu').classList.remove('open'); }
+  function openSheet(id) { closeSheets(); $(id).classList.add('open'); $('#overlay').classList.add('open'); }
+  $('#overlay').onclick = closeSheets;
+  $$('.sh-close').forEach(function (b) { b.onclick = closeSheets; });
+  $('#btnSearch').onclick = function () { openSheet('#search'); setTimeout(function () { $('#sinput').focus(); }, 50); doSearch($('#sinput').value); };
+  $('#btnRec').onclick = function () { renderRec(); openSheet('#rec'); };
+  $('#btnMenu').onclick = function (e) { e.stopPropagation(); var m = $('#menu'); var o = !m.classList.contains('open'); closeSheets(); m.classList.toggle('open', o); syncMenu(); };
+  document.addEventListener('click', function (e) { if (!tgt(e).closest('#menu') && !tgt(e).closest('#btnMenu')) $('#menu').classList.remove('open'); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closeSheets(); closePop(); hideMB(); $('#lbClose').click(); closeTOC(); }
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); $('#btnSearch').click(); }
+  });
+
+  function syncMenu() {
+    $('#miHideKeys').classList.toggle('on', !!S.prefs.hideKeys);
+    $('#miHideFig').classList.toggle('on', !!S.prefs.hideFig);
+    $$('#fsSeg button').forEach(function (b) { b.classList.toggle('on', (S.prefs.fs || 'm') === b.dataset.fs); });
+  }
+  $('#miHideKeys').onclick = function () { setGlobalHide(!S.prefs.hideKeys); };
+  $('#miHideFig').onclick = function () { S.prefs.hideFig = !S.prefs.hideFig; save('prefs'); setFigHide(document, S.prefs.hideFig); syncMenu(); };
+  $$('#fsSeg button').forEach(function (b) { b.onclick = function () { S.prefs.fs = b.dataset.fs; save('prefs'); applyFs(); syncMenu(); }; });
+  function applyFs() { var h = document.documentElement; h.classList.remove('fs-s', 'fs-l'); if (S.prefs.fs === 's') h.classList.add('fs-s'); if (S.prefs.fs === 'l') h.classList.add('fs-l'); }
+  function doPrint(ans) {
+    closeSheets();
+    if (inArtifact()) { toast('リンク版では印刷できません。印刷・PDF保存は、HTMLファイル版をブラウザで開いて行ってください', null, 7000); return; }
+    document.body.classList.toggle('print-ans', !!ans);
+    setTimeout(function () { window.print(); }, 100);
+  }
+  $('#miPrint').onclick = function () { doPrint(false); };
+  $('#miPrintAns').onclick = function () { doPrint(true); };
+  var openedForPrint = [];
+  window.addEventListener('beforeprint', function () { openedForPrint = $$('details:not([open])'); openedForPrint.forEach(function (d) { d.open = true; }); });
+  window.addEventListener('afterprint', function () { openedForPrint.forEach(function (d) { d.open = false; }); document.body.classList.remove('print-ans'); });
+
+  /* ---------- 学習記録パネル ---------- */
+  function li(text, href, onx) {
+    var l = document.createElement('li'), a = document.createElement('a'); a.href = href; a.textContent = text;
+    a.onclick = function (e) { e.preventDefault(); closeSheets(); var t = document.getElementById(href.slice(1)) || $('[data-qid="' + href.slice(1) + '"]'); setTimeout(function () { goTo(t); }, 60); };
+    l.appendChild(a);
+    if (onx) { var x = document.createElement('button'); x.className = 'x'; x.type = 'button'; x.textContent = '外す'; x.onclick = onx; l.appendChild(x); }
+    return l;
+  }
+  function renderRec() {
+    var dn = units.filter(function (u) { return S.done[u.id]; }).length;
+    var qa = Object.keys(S.quiz).length, qo = Object.keys(S.quiz).filter(function (k) { return S.quiz[k].ok; }).length;
+    $('#recStat').innerHTML = '';
+    [[dn + '/' + units.length, '学習済みテーマ'], [qo + '/' + qa, '問題の正解数'], [Object.keys(S.weak).length, '苦手']].forEach(function (x) {
+      var d = document.createElement('div'); var b = document.createElement('b'); b.textContent = x[0]; var s = document.createElement('span'); s.textContent = x[1]; d.appendChild(b); d.appendChild(s); $('#recStat').appendChild(d);
+    });
+    var pp = $('#recParts'); pp.innerHTML = '';
+    var parts = [];
+    units.forEach(function (u) { var p = u.getAttribute('data-part') || ''; if (parts.indexOf(p) < 0) parts.push(p); });
+    parts.forEach(function (p) {
+      var us = units.filter(function (u) { return (u.getAttribute('data-part') || '') === p; });
+      var n = us.filter(function (u) { return S.done[u.id]; }).length;
+      var d = document.createElement('div'); d.className = 'pp';
+      d.innerHTML = '<span></span><i><b></b></i><em></em>';
+      d.querySelector('span').textContent = (p || '—').replace(/（.*?）/g, ''); d.querySelector('b').style.width = (100 * n / us.length) + '%'; d.querySelector('em').textContent = n + '/' + us.length;
+      pp.appendChild(d);
+    });
+    var bl = $('#recBm'); bl.innerHTML = '';
+    var bms = Object.keys(S.bm).filter(function (k) { return unitById[k]; });
+    if (!bms.length) bl.innerHTML = '<li class="empty">各テーマの「ブックマーク」で追加できます</li>';
+    bms.forEach(function (k) { bl.appendChild(li(uno(unitById[k]) + ' ' + utitle(unitById[k]), '#' + k, function () { delete S.bm[k]; save('bm'); syncUnit(unitById[k]); refreshTOC(); renderRec(); })); });
+    var wl = $('#recWeak'); wl.innerHTML = '';
+    var wk = Object.keys(S.weak).filter(function (k) { return unitById[S.weak[k].unit]; });
+    if (!wk.length) wl.innerHTML = '<li class="empty">間違えた問題や「苦手に登録」したテーマがここに集まります</li>';
+    wk.forEach(function (k) {
+      var w = S.weak[k], target = k.indexOf('unit:') === 0 ? w.unit : k;
+      wl.appendChild(li('【' + uno(unitById[w.unit]) + '】' + w.label, '#' + target, function () { delete S.weak[k]; save('weak'); if (k.indexOf('unit:') === 0) syncUnit(unitById[w.unit]); renderRec(); }));
+    });
+    var nn = Object.keys(S.notes).length + Object.keys(S.write).length, mm = Object.keys(S.marks).reduce(function (a, k) { return a + S.marks[k].length; }, 0);
+    $('#recNoteInfo').textContent = 'ノート ' + nn + '件・マーカー ' + mm + '件';
+  }
+  function notesText() {
+    var out = ['【' + document.title + '】マイノート（' + today() + '）', ''];
+    units.forEach(function (u) {
+      var parts = [];
+      $$('.note', u).forEach(function (nt) { var v = S.notes[nt.dataset.id]; if (v) parts.push('◇ ' + (nt.getAttribute('data-prompt') || 'ノート') + '\n' + v); });
+      $$('.q.write', u).forEach(function (q) { var v = S.write[q.dataset.qid]; if (v) parts.push('◇ 問：' + textOf($('.stem', q)) + '\n' + v); });
+      var ms = [];
+      $$('[data-bid]', u).forEach(function (b) { (S.marks[b.getAttribute('data-bid')] || []).forEach(function (m) { ms.push('・' + m.t); }); });
+      if (ms.length) parts.push('◇ マーカーを引いた語句\n' + ms.join('\n'));
+      if (parts.length) { out.push('■ ' + uno(u) + ' ' + utitle(u)); out.push(parts.join('\n\n')); out.push(''); }
+    });
+    return out.join('\n');
+  }
+  $('#recCopyNotes').onclick = function () { var t = notesText(); if (t.split('\n').length < 4) { toast('まだノートがありません'); return; } copyText(t, 'すべてのノートをコピーしました'); };
+  $('#recExportNotes').onclick = function () { var t = notesText(); if (t.split('\n').length < 4) { toast('まだノートがありません'); return; } download(new Blob([t], { type: 'text/plain;charset=utf-8' }), FNAME + '_ノート_' + today() + '.txt', 'ノートを保存しました'); };
+  $('#recBackup').onclick = function () {
+    var data = { app: 'dtx', book: BOOK, date: new Date().toISOString(), data: {} };
+    store.keys().forEach(function (k) { data.data[k.slice(PFX.length)] = localStorage.getItem(k); });
+    download(new Blob([JSON.stringify(data, null, 1)], { type: 'application/json' }), FNAME + '_バックアップ_' + today() + '.json', 'バックアップを保存しました');
+  };
+  $('#recRestore').onclick = function () { $('#restoreFile').click(); };
+  $('#restoreFile').onchange = function (e) {
+    var f = e.target.files[0]; if (!f) return;
+    var rd = new FileReader();
+    rd.onload = function () {
+      try {
+        var j = JSON.parse(rd.result);
+        if (j.app !== 'dtx' || !j.data) throw new Error('形式');
+        var other = j.book !== BOOK ? '（別の教材のバックアップです）' : '';
+        ask('いまの学習記録を、このバックアップの内容で置き換えます' + other, '置き換える', function () {
+          try {
+            store.keys().forEach(function (k) { localStorage.removeItem(k); });
+            Object.keys(j.data).forEach(function (k) { localStorage.setItem(PFX + k, j.data[k]); });
+            reloadSoon('復元しました');
+          } catch (e2) { toast('復元できませんでした（ブラウザの保存領域を確認してください）'); }
+        });
+      } catch (err) { toast('このファイルは読み込めませんでした'); }
+    };
+    rd.readAsText(f); e.target.value = '';
+  };
+  $('#recReset').onclick = function () {
+    ask('チェック・ノート・マーカー・問題の結果をすべて消します。元に戻せません（先にバックアップを）', 'すべて消す', function () {
+      store.keys().forEach(function (k) { localStorage.removeItem(k); });
+      reloadSoon('消去しました');
+    });
+  };
+  function reloadSoon(msg) {
+    toast(msg + '。表示を更新します');
+    setTimeout(function () { try { location.reload(); } catch (e) { toast(msg + '。ページを開き直すと反映されます', null, 8000); } }, 900);
+  }
+
+  /* ---------- 起動 ---------- */
+  buildTOC();
+  restoreMarks();
+  applyFs();
+  if (S.prefs.hideKeys) document.body.classList.add('hide-keys');
+  if (S.prefs.hideFig) setTimeout(function () { setFigHide(document, true); }, 300);
+  syncMenu();
+  onScroll();
+  var pos = store.get('pos', null);
+  if (pos && unitById[pos.unit] && !location.hash) {
+    var u = unitById[pos.unit];
+    toast('前回の続き：' + uno(u) + ' ' + utitle(u), [
+      { label: '続きから', fn: function () { var el = pos.bid && $('[data-bid="' + pos.bid + '"]'); (el || u).scrollIntoView({ block: el ? 'center' : 'start' }); if (el) flash(el); } },
+      { label: '×', ghost: true }], 12000);
+  }
+  window.DTX = { store: store, state: S, notesText: notesText };
+})();
+
+</script>
+</body>
+</html>
